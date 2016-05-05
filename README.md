@@ -1,16 +1,16 @@
 [![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
-### Íàñòðîéêà áàçû äàííûõ PostgreSQL:
+### Настройка базы данных PostgreSQL:
 
---Øàã 1
---Ñîçäàòü ÁÄ hello ñ ïîìîùüþ shell psql èëè ëþáûì óäîáíûì ñïîñîáîì :)
-CREATE DATABASE hello
+--Шаг 1
+--Создать БД processing с помощью shell psql или любым удобным способом :)
+CREATE DATABASE processing
   WITH OWNER = postgres
        ENCODING = 'UTF8'
        TABLESPACE = pg_default
        LC_COLLATE = 'English_United States.1252'
        LC_CTYPE = 'English_United States.1252'
        CONNECTION LIMIT = -1;
---Ñîçäàòü òàáëèöó contacts      
+--Создать таблицу contacts      
 CREATE TABLE contacts
 (
   id bigint NOT NULL, -- User id
@@ -24,37 +24,37 @@ ALTER TABLE contacts
   OWNER TO postgres;
 COMMENT ON COLUMN contacts.id IS 'User id';
 COMMENT ON COLUMN contacts.name IS 'User name';
---[ëîã âûïîëíåíèÿ psqlCmd.log]
+--[лог выполнения psqlCmd.log]
 
---Øàã 2
---Ñäåëàòü ðåñòîð èç contactsBackup.backup ñ ïîìîùüþ ..PostgreSQL/bin/pg_restore 
---ñëåäóþùåé êîìàíäîé  
+--Шаг 2
+--Сделать рестор из contactsBackup.backup с помощью ..PostgreSQL/bin/pg_restore 
+--следующей командой  
 pg_restore --host localhost --port 5432 --username "postgres" --dbname "hello" --password  --data-only --table contacts --verbose "G:\Java_Project\ContactsSeeker\contactsBackup.backup"
---[ëîã âûïîëíåíèÿ pg_restoreCmd.log]
--Îáðàòèòü âíèìàíèå íà ôàéë databaseConfig.xml â íåì ïðîèñõîäèò íàñòðîéêà JDBC, à òàêæå ïîäêëþ÷åíèÿ ê Postgresql
+--[лог выполнения pg_restoreCmd.log]
+-Обратить внимание на файл databaseConfig.xml в нем происходит настройка JDBC, а также подключения к Postgresql
 
-### Êàê ñîáðàòü àðòåôàêò (*.war):
+### Как собрать артефакт (*.war):
 
--Èñïîëüçóåì êîìàíäó mvn clean install
--Ñìîòðèì ëîãè âñå ëè ñîáðàëîñü, âûïîëíèëèñü ëè òåñòû
+-Используем команду mvn clean install
+-Смотрим логи все ли собралось, выполнились ли тесты
 
-### Äåïëîé ïðèëîæäåíèÿ:
--Äåïëîèì ïðèëîæåíèå ñïîìîùüþ mvn tomcat:deploy (ìàíóàë http://programador.ru/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-maven-tomcat/)
-ëèáî ñ  ïîìîùüþ ëþáîãî IDE, èìåþùåãî òàêîé ôóíêöèîíàë
--Ðàçâåðòûâàíèå ïðîåêòà îñóùåñòâëÿëîñü ïîä Apache Tomcat 8.0.9 (âîçìîæåí çàïóñê è íà áîëåå ðàííèõ âåðñèÿõ),
-ïëàòôîðìà Java EE 7
+### Деплой прилождения:
+-Деплоим приложение спомощью mvn tomcat:deploy (мануал http://programador.ru/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-maven-tomcat/)
+либо с  помощью любого IDE, имеющего такой функционал
+-Развертывание проекта осуществлялось под Apache Tomcat 8.0.9 (возможен запуск и на более ранних версиях),
+платформа Java EE 7
 
 
-### Ñèãíàòóðà ñåðâèñà:
+### Сигнатура сервиса:
 
-/hello/contacts?nameFilter=val [ &limit=500000 ïî óìîë÷àíèþ ]
-ãäå
-nameFilter - âõîäíîå ðåãóëÿðíîå âûðàæåíèå, èñêëþ÷àþùåå â îòâåòå äàííûå êîíòàêòû
-limit      - ëèìèò êîíòàêòîâ â îòâåòå ñåðâèñà, óñòàíîâëåíî 500000 ïî óìîë÷àíèþ
+/hello/contacts?nameFilter=val [ &limit=500000 по умолчанию ]
+где
+nameFilter - входное регулярное выражение, исключающее в ответе данные контакты
+limit      - лимит контактов в ответе сервиса, установлено 500000 по умолчанию
 
-Ïðèìåðû âûçîâîâ:
-Ïî óìîë÷àíèþ
+Примеры вызовов:
+По умолчанию
 http://localhost:8084/ContactsSeeker/hello/contacts?nameFilter=^.*[aei].*$
 
-Òîï 40 000 êîíòàêòîâ â îòâåòå 
+Топ 40 000 контактов в ответе 
 http://localhost:8084/ContactsSeeker/hello/contacts?nameFilter=^A.*$&limit=40000
