@@ -1,4 +1,4 @@
-https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master
+[![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
 ### Íàñòðîéêà áàçû äàííûõ PostgreSQL:
 
 --Øàã 1
