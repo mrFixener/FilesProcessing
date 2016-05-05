@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+    <class name="com.filesprocessing.domain.Filesprocessing">
+        <map-to xml="Entry" />
+        
+        <field name="content" type="string">
+            <bind-xml name="content" node="element" />
+        </field>
+
+        <field name="creationDate" type="timestamp">
+            <bind-xml name="creationDate" node="element" />
+        </field>
+    </class>
+</mapping>

@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.filesprocessing.test.FilesListenerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-05-05T21:22:00" hostname="Admin-SDJ" time="5.014">
+  <properties/>
+  <testcase name="handlerCorrectFileTest" classname="com.filesprocessing.test.FilesListenerTest" time="4.475"/>
+  <testcase name="handlerIncorrectFileTest" classname="com.filesprocessing.test.FilesListenerTest" time="0.538"/>
+  <system-out><![CDATA[DEBUG [Test worker] (SpringJUnit4ClassRunner.java:106) - SpringJUnit4ClassRunner constructor called with [class com.filesprocessing.test.FilesListenerTest].
+DEBUG [Test worker] (AbstractDelegatingSmartContextLoader.java:89) - Delegating to GenericXmlContextLoader to process context configuration [ContextConfigurationAttributes@3b463340 declaringClass = 'com.filesprocessing.test.FilesListenerTest', locations = '{classpath:testSpring.xml}', classes = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+DEBUG [Test worker] (ContextLoaderUtils.java:471) - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (TestContextManager.java:183) - @TestExecutionListeners is not present for class [class com.filesprocessing.test.FilesListenerTest]: using defaults.
+ INFO [Test worker] (TestContextManager.java:224) - Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (DependencyInjectionTestExecutionListener.java:73) - Performing dependency injection for test context [[TestContext@699eb5f6 testClass = FilesListenerTest, testInstance = com.filesprocessing.test.FilesListenerTest@32bc5fa6, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [Test worker] (AbstractDelegatingSmartContextLoader.java:98) - Delegating to GenericXmlContextLoader to load context from [MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].
+DEBUG [Test worker] (AbstractGenericContextLoader.java:104) - Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [Test worker] (AbstractEnvironment.java:127) - Initializing new StandardEnvironment
+DEBUG [Test worker] (MutablePropertySources.java:107) - Adding [systemProperties] PropertySource with lowest search precedence
+DEBUG [Test worker] (MutablePropertySources.java:107) - Adding [systemEnvironment] PropertySource with lowest search precedence
+DEBUG [Test worker] (AbstractEnvironment.java:131) - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+ INFO [Test worker] (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [testSpring.xml]
+DEBUG [Test worker] (DefaultDocumentLoader.java:72) - Using JAXP provider [org.apache.xerces.jaxp.DocumentBuilderFactoryImpl]
+DEBUG [Test worker] (PluggableSchemaResolver.java:140) - Loading schema mappings from [META-INF/spring.schemas]
+DEBUG [Test worker] (PluggableSchemaResolver.java:146) - Loaded schema mappings: {http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/jms/spring-jms-3.0.xsd=org/springframework/jms/config/spring-jms-3.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/jms/spring-jms-3.2.xsd=org/springframework/jms/config/spring-jms-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/jms/spring-jms-2.5.xsd=org/springframework/jms/config/spring-jms-2.5.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd=org/springframework/oxm/config/spring-oxm-3.1.xsd, http://www.springframework.org/schema/jms/spring-jms.xsd=org/springframework/jms/config/spring-jms-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/jms/spring-jms-3.1.xsd=org/springframework/jms/config/spring-jms-3.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+DEBUG [Test worker] (PluggableSchemaResolver.java:118) - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.2.xsd
+DEBUG [Test worker] (PluggableSchemaResolver.java:118) - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.2.xsd] in classpath: org/springframework/context/config/spring-context-3.2.xsd
+DEBUG [Test worker] (PluggableSchemaResolver.java:118) - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+DEBUG [Test worker] (DefaultBeanDefinitionDocumentReader.java:106) - Loading bean definitions
+DEBUG [Test worker] (DefaultNamespaceHandlerResolver.java:156) - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/jms=org.springframework.jms.config.JmsNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+DEBUG [Test worker] (BeanDefinitionParserDelegate.java:500) - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0]
+DEBUG [Test worker] (PathMatchingResourcePatternResolver.java:550) - Looking for matching resources in directory tree [G:\Java_Project\FilesProcessing\build\classes\main\com\filesprocessing\dao\impl]
+DEBUG [Test worker] (PathMatchingResourcePatternResolver.java:612) - Searching directory [G:\Java_Project\FilesProcessing\build\classes\main\com\filesprocessing\dao\impl] for files matching pattern [G:/Java_Project/FilesProcessing/build/classes/main/com/filesprocessing/dao/impl/**/*.class]
+DEBUG [Test worker] (PathMatchingResourcePatternResolver.java:351) - Resolved location pattern [classpath*:com/filesprocessing/dao/impl/**/*.class] to resources [file [G:\Java_Project\FilesProcessing\build\classes\main\com\filesprocessing\dao\impl\FilesProcessingDAOImpl.class]]
+DEBUG [Test worker] (ClassPathScanningCandidateComponentProvider.java:273) - Identified candidate component class: file [G:\Java_Project\FilesProcessing\build\classes\main\com\filesprocessing\dao\impl\FilesProcessingDAOImpl.class]
+DEBUG [Test worker] (PathMatchingResourcePatternResolver.java:550) - Looking for matching resources in directory tree [G:\Java_Project\FilesProcessing\build\classes\main\com\filesprocessing\service]
+DEBUG [Test worker] (PathMatchingResourcePatternResolver.java:612) - Searching directory [G:\Java_Project\FilesProcessing\build\classes\main\com\filesprocessing\service] for files matching pattern [G:/Java_Project/FilesProcessing/build/classes/main/com/filesprocessing/service/**/*.class]
+DEBUG [Test worker] (PathMatchingResourcePatternResolver.java:351) - Resolved location pattern [classpath*:com/filesprocessing/service/**/*.class] to resources [file [G:\Java_Project\FilesProcessing\build\classes\main\com\filesprocessing\service\FilesProcessingService.class]]
+DEBUG [Test worker] (ClassPathScanningCandidateComponentProvider.java:273) - Identified candidate component class: file [G:\Java_Project\FilesProcessing\build\classes\main\com\filesprocessing\service\FilesProcessingService.class]
+ INFO [Test worker] (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [databaseConfigTest.xml]
+DEBUG [Test worker] (DefaultDocumentLoader.java:72) - Using JAXP provider [org.apache.xerces.jaxp.DocumentBuilderFactoryImpl]
+DEBUG [Test worker] (PluggableSchemaResolver.java:118) - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.2.xsd
+DEBUG [Test worker] (PluggableSchemaResolver.java:118) - Found XML schema [http://www.springframework.org/schema/tx/spring-tx-3.2.xsd] in classpath: org/springframework/transaction/config/spring-tx-3.2.xsd
+DEBUG [Test worker] (PluggableSchemaResolver.java:118) - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+DEBUG [Test worker] (DefaultBeanDefinitionDocumentReader.java:106) - Loading bean definitions
+DEBUG [Test worker] (DefaultBeanDefinitionDocumentReader.java:275) - Imported 8 bean definitions from relative location [databaseConfigTest.xml]
+DEBUG [Test worker] (AbstractBeanDefinitionReader.java:216) - Loaded 21 bean definitions from location pattern [classpath:testSpring.xml]
+ INFO [Test worker] (AbstractApplicationContext.java:510) - Refreshing org.springframework.context.support.GenericApplicationContext@68e825fe: startup date [Fri May 06 00:22:01 EEST 2016]; root of context hierarchy
+DEBUG [Test worker] (AbstractApplicationContext.java:540) - Bean factory for org.springframework.context.support.GenericApplicationContext@68e825fe: org.springframework.beans.factory.support.DefaultListableBeanFactory@50137215: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,filesProcessingDAOImpl,filesProcessingService,configProperties,configuration,filesListener,castorMarshaller,xmlConverter,dataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,hibernateTemplate]; root of factory hierarchy
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'configProperties'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'configProperties'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'configProperties' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'configProperties'
+ INFO [Test worker] (PropertiesLoaderSupport.java:172) - Loading properties file from class path resource [testConfiguration.properties]
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0' to allow for resolving potential circular references
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'sessionFactory'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'sessionFactory'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'sessionFactory' to allow for resolving potential circular references
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'dataSource'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'dataSource'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'dataSource' to allow for resolving potential circular references
+ INFO [Test worker] (DriverManagerDataSource.java:153) - Loaded JDBC driver: org.postgresql.Driver
+ INFO [Test worker] (AbstractApplicationContext.java:1374) - Bean 'dataSource' of type [class org.springframework.jdbc.datasource.DriverManagerDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'dataSource'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:1555) - Invoking afterPropertiesSet() on bean with name 'sessionFactory'
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration boolean -> org.hibernate.type.BooleanType@30cbd684
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration boolean -> org.hibernate.type.BooleanType@30cbd684
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@30cbd684
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@21738d88
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration true_false -> org.hibernate.type.TrueFalseType@61bdda87
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration yes_no -> org.hibernate.type.YesNoType@3aa368a4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration byte -> org.hibernate.type.ByteType@6ad29f56
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration byte -> org.hibernate.type.ByteType@6ad29f56
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@6ad29f56
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration character -> org.hibernate.type.CharacterType@2585899a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration char -> org.hibernate.type.CharacterType@2585899a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@2585899a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration short -> org.hibernate.type.ShortType@5069958d
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration short -> org.hibernate.type.ShortType@5069958d
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@5069958d
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration integer -> org.hibernate.type.IntegerType@60e70884
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration int -> org.hibernate.type.IntegerType@60e70884
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@60e70884
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration long -> org.hibernate.type.LongType@3103dc71
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration long -> org.hibernate.type.LongType@3103dc71
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Long -> org.hibernate.type.LongType@3103dc71
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration float -> org.hibernate.type.FloatType@34be77d8
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration float -> org.hibernate.type.FloatType@34be77d8
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@34be77d8
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration double -> org.hibernate.type.DoubleType@1d2ab9ab
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration double -> org.hibernate.type.DoubleType@1d2ab9ab
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@1d2ab9ab
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@7fd44282
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@7fd44282
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@7dc72b45
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@7dc72b45
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration string -> org.hibernate.type.StringType@c209819
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.String -> org.hibernate.type.StringType@c209819
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration url -> org.hibernate.type.UrlType@4d7c58fe
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.net.URL -> org.hibernate.type.UrlType@4d7c58fe
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration date -> org.hibernate.type.DateType@455554c1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Date -> org.hibernate.type.DateType@455554c1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration time -> org.hibernate.type.TimeType@24db4002
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@24db4002
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration timestamp -> org.hibernate.type.TimestampType@30350fc4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@30350fc4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@30350fc4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@3eb60b56
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration calendar -> org.hibernate.type.CalendarType@561f2f76
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@561f2f76
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@561f2f76
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@9454326
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration locale -> org.hibernate.type.LocaleType@3a9280d0
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@3a9280d0
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration currency -> org.hibernate.type.CurrencyType@55a76fe3
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@55a76fe3
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration timezone -> org.hibernate.type.TimeZoneType@65eaba6a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@65eaba6a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration class -> org.hibernate.type.ClassType@6d04bceb
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@6d04bceb
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5a3dfc08
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5a3dfc08
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@267fe9b1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@5bad2ad6
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration binary -> org.hibernate.type.BinaryType@23815aa4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration byte[] -> org.hibernate.type.BinaryType@23815aa4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration [B -> org.hibernate.type.BinaryType@23815aa4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@372e71a4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@372e71a4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@372e71a4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration image -> org.hibernate.type.ImageType@144e5ea5
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration characters -> org.hibernate.type.CharArrayType@62461fc6
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration char[] -> org.hibernate.type.CharArrayType@62461fc6
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration [C -> org.hibernate.type.CharArrayType@62461fc6
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@239190ce
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@239190ce
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@239190ce
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration text -> org.hibernate.type.TextType@2042ae49
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration blob -> org.hibernate.type.BlobType@410ed079
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@410ed079
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@606e76b4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration wrapper_materialized_blob -> org.hibernate.type.WrappedMaterializedBlobType@6b118a2d
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration clob -> org.hibernate.type.ClobType@65cc55e
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@65cc55e
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@3863d857
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration wrapper_characters_clob -> org.hibernate.type.CharacterArrayClobType@5bc6b1b4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration characters_clob -> org.hibernate.type.PrimitiveCharacterArrayClobType@37b55ca1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration serializable -> org.hibernate.type.SerializableType@58943431
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration object -> org.hibernate.type.ObjectType@48e9afa1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@48e9afa1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@79c20eb2
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@33530691
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@fd433ea
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@349c4fc4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@238e7d8
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@65fd170b
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4af4077c
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@5b178455
+ INFO [Test worker] (Version.java:37) - Hibernate Commons Annotations 3.2.0.Final
+ INFO [Test worker] (Environment.java:593) - Hibernate 3.6.3.Final
+ INFO [Test worker] (Environment.java:626) - hibernate.properties not found
+ INFO [Test worker] (Environment.java:804) - Bytecode provider name : javassist
+ INFO [Test worker] (Environment.java:685) - using JDK 1.4 java.sql.Timestamp handling
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [uuid2] -> [class org.hibernate.id.UUIDGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [guid] -> [class org.hibernate.id.GUIDGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [uuid] -> [class org.hibernate.id.UUIDHexGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [uuid.hex] -> [class org.hibernate.id.UUIDHexGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [hilo] -> [class org.hibernate.id.TableHiLoGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [assigned] -> [class org.hibernate.id.Assigned]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [identity] -> [class org.hibernate.id.IdentityGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [select] -> [class org.hibernate.id.SelectGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [sequence] -> [class org.hibernate.id.SequenceGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [seqhilo] -> [class org.hibernate.id.SequenceHiLoGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [increment] -> [class org.hibernate.id.IncrementGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [foreign] -> [class org.hibernate.id.ForeignGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [sequence-identity] -> [class org.hibernate.id.SequenceIdentityGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [enhanced-sequence] -> [class org.hibernate.id.enhanced.SequenceStyleGenerator]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:100) - Registering IdentifierGenerator strategy [enhanced-table] -> [class org.hibernate.id.enhanced.TableGenerator]
+DEBUG [Test worker] (Configuration.java:3968) - Processing hbm.xml files
+DEBUG [Test worker] (Configuration.java:3998) - Process annotated classes
+ INFO [Test worker] (AnnotationBinder.java:532) - Binding entity from annotated class: com.filesprocessing.domain.Filesprocessing
+DEBUG [Test worker] (Ejb3Column.java:192) - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+DEBUG [Test worker] (AnnotationBinder.java:1019) - no value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+DEBUG [Test worker] (EntityBinder.java:364) - Import with entity name Filesprocessing
+ INFO [Test worker] (EntityBinder.java:530) - Bind entity com.filesprocessing.domain.Filesprocessing on table Filesprocessing
+DEBUG [Test worker] (Ejb3Column.java:192) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Filesprocessing), mappingColumn=id, insertable=true, updatable=true, unique=false}
+DEBUG [Test worker] (PropertyBinder.java:175) - binding property id with lazy=false
+DEBUG [Test worker] (SimpleValueBinder.java:303) - building SimpleValue for id
+DEBUG [Test worker] (PropertyBinder.java:255) - Building property id
+DEBUG [Test worker] (Ejb3Column.java:192) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Filesprocessing), mappingColumn=content, insertable=true, updatable=true, unique=false}
+DEBUG [Test worker] (PropertyBinder.java:175) - binding property content with lazy=false
+DEBUG [Test worker] (SimpleValueBinder.java:303) - building SimpleValue for content
+DEBUG [Test worker] (PropertyBinder.java:255) - Building property content
+DEBUG [Test worker] (Ejb3Column.java:192) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Filesprocessing), mappingColumn=creationdate, insertable=true, updatable=true, unique=false}
+DEBUG [Test worker] (PropertyBinder.java:175) - binding property creationDate with lazy=false
+DEBUG [Test worker] (SimpleValueBinder.java:303) - building SimpleValue for creationDate
+DEBUG [Test worker] (PropertyBinder.java:255) - Building property creationDate
+DEBUG [Test worker] (Ejb3Column.java:192) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Filesprocessing), mappingColumn=procdate, insertable=true, updatable=true, unique=false}
+DEBUG [Test worker] (PropertyBinder.java:175) - binding property procDate with lazy=false
+DEBUG [Test worker] (SimpleValueBinder.java:303) - building SimpleValue for procDate
+DEBUG [Test worker] (PropertyBinder.java:255) - Building property procDate
+DEBUG [Test worker] (SimpleValueBinder.java:341) - Setting SimpleValue typeName for id
+DEBUG [Test worker] (SimpleValueBinder.java:341) - Setting SimpleValue typeName for content
+DEBUG [Test worker] (SimpleValueBinder.java:341) - Setting SimpleValue typeName for creationDate
+DEBUG [Test worker] (SimpleValueBinder.java:341) - Setting SimpleValue typeName for procDate
+DEBUG [Test worker] (Configuration.java:1439) - processing fk mappings (*ToOne and JoinedSubclass)
+DEBUG [Test worker] (Configuration.java:1681) - processing extends queue
+DEBUG [Test worker] (Configuration.java:1735) - processing extends queue
+DEBUG [Test worker] (Configuration.java:1684) - processing collection mappings
+DEBUG [Test worker] (Configuration.java:1694) - processing native query and ResultSetMapping mappings
+DEBUG [Test worker] (Configuration.java:1702) - processing association property references
+DEBUG [Test worker] (Configuration.java:1724) - processing foreign key constraints
+ INFO [Test worker] (Configuration.java:1649) - Hibernate Validator not found: ignoring
+DEBUG [Test worker] (LoggerFactory.java:29) - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+ INFO [Test worker] (Version.java:27) - HV000001: Hibernate Validator 5.0.1.Final
+DEBUG [Test worker] (DefaultTraversableResolver.java:106) - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+DEBUG [Test worker] (DefaultTraversableResolver.java:117) - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+DEBUG [Test worker] (ValidationXmlParser.java:88) - Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG [Test worker] (ValidationXmlParser.java:95) - No META-INF/validation.xml found. Using annotation based configuration only.
+ INFO [Test worker] (LocalSessionFactoryBean.java:780) - Building new Hibernate SessionFactory
+DEBUG [Test worker] (Configuration.java:1827) - Preparing to build session factory with filters : {}
+DEBUG [Test worker] (Configuration.java:3968) - Processing hbm.xml files
+DEBUG [Test worker] (Configuration.java:3998) - Process annotated classes
+DEBUG [Test worker] (Configuration.java:1439) - processing fk mappings (*ToOne and JoinedSubclass)
+DEBUG [Test worker] (Configuration.java:1681) - processing extends queue
+DEBUG [Test worker] (Configuration.java:1735) - processing extends queue
+DEBUG [Test worker] (Configuration.java:1684) - processing collection mappings
+DEBUG [Test worker] (Configuration.java:1694) - processing native query and ResultSetMapping mappings
+DEBUG [Test worker] (Configuration.java:1702) - processing association property references
+DEBUG [Test worker] (Configuration.java:1724) - processing foreign key constraints
+DEBUG [Test worker] (DefaultTraversableResolver.java:106) - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+DEBUG [Test worker] (DefaultTraversableResolver.java:117) - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+DEBUG [Test worker] (ValidationXmlParser.java:88) - Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG [Test worker] (ValidationXmlParser.java:95) - No META-INF/validation.xml found. Using annotation based configuration only.
+DEBUG [Test worker] (Configuration.java:1869) - Legacy Validator not present in classpath, ignoring event listener registration
+DEBUG [Test worker] (DefaultTraversableResolver.java:106) - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+DEBUG [Test worker] (DefaultTraversableResolver.java:117) - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+DEBUG [Test worker] (ValidationXmlParser.java:88) - Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG [Test worker] (ValidationXmlParser.java:95) - No META-INF/validation.xml found. Using annotation based configuration only.
+DEBUG [Test worker] (HibernateSearchEventListenerRegister.java:231) - Search not present in classpath, ignoring event listener registration.
+ INFO [Test worker] (HibernateSearchEventListenerRegister.java:75) - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+ INFO [Test worker] (ConnectionProviderFactory.java:173) - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+ INFO [Test worker] (Dialect.java:135) - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+ INFO [Test worker] (JdbcSupportLoader.java:108) - Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ INFO [Test worker] (SettingsFactory.java:126) - Database ->
+       name : PostgreSQL
+    version : 9.5.1
+      major : 9
+      minor : 5
+ INFO [Test worker] (SettingsFactory.java:132) - Driver ->
+       name : PostgreSQL Native Driver
+    version : PostgreSQL 9.1 JDBC4 (build 901)
+      major : 9
+      minor : 1
+ INFO [Test worker] (TransactionFactoryFactory.java:62) - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+ INFO [Test worker] (TransactionManagerLookupFactory.java:80) - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+ INFO [Test worker] (SettingsFactory.java:179) - Automatic flush during beforeCompletion(): disabled
+ INFO [Test worker] (SettingsFactory.java:183) - Automatic session close at end of transaction: disabled
+ INFO [Test worker] (SettingsFactory.java:190) - JDBC batch size: 15
+ INFO [Test worker] (SettingsFactory.java:193) - JDBC batch updates for versioned data: disabled
+ INFO [Test worker] (SettingsFactory.java:198) - Scrollable result sets: enabled
+DEBUG [Test worker] (SettingsFactory.java:202) - Wrap result sets: disabled
+ INFO [Test worker] (SettingsFactory.java:206) - JDBC3 getGeneratedKeys(): enabled
+ INFO [Test worker] (SettingsFactory.java:214) - Connection release mode: auto
+ INFO [Test worker] (SettingsFactory.java:232) - Default schema: public
+ INFO [Test worker] (SettingsFactory.java:241) - Default batch fetch size: 1
+ INFO [Test worker] (SettingsFactory.java:245) - Generate SQL with comments: disabled
+ INFO [Test worker] (SettingsFactory.java:249) - Order SQL updates by primary key: enabled
+ INFO [Test worker] (SettingsFactory.java:253) - Order SQL inserts for batching: disabled
+ INFO [Test worker] (SettingsFactory.java:431) - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+ INFO [Test worker] (ASTQueryTranslatorFactory.java:47) - Using ASTQueryTranslatorFactory
+ INFO [Test worker] (SettingsFactory.java:261) - Query language substitutions: {}
+ INFO [Test worker] (SettingsFactory.java:266) - JPA-QL strict compliance: disabled
+ INFO [Test worker] (SettingsFactory.java:271) - Second-level cache: enabled
+ INFO [Test worker] (SettingsFactory.java:275) - Query cache: disabled
+ INFO [Test worker] (SettingsFactory.java:406) - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+ INFO [Test worker] (SettingsFactory.java:285) - Optimize cache for minimal puts: disabled
+ INFO [Test worker] (SettingsFactory.java:294) - Structured second-level cache entries: disabled
+ INFO [Test worker] (SettingsFactory.java:323) - Statistics: disabled
+ INFO [Test worker] (SettingsFactory.java:327) - Deleted entity synthetic identifier rollback: disabled
+ INFO [Test worker] (SettingsFactory.java:343) - Default entity-mode: pojo
+ INFO [Test worker] (SettingsFactory.java:347) - Named query checking : enabled
+ INFO [Test worker] (SettingsFactory.java:351) - Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+ INFO [Test worker] (SessionFactoryImpl.java:202) - building session factory
+DEBUG [Test worker] (SessionFactoryImpl.java:206) - Statistics initialized [enabled=false]}
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration boolean -> org.hibernate.type.BooleanType@30cbd684
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration boolean -> org.hibernate.type.BooleanType@30cbd684
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@30cbd684
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@21738d88
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration true_false -> org.hibernate.type.TrueFalseType@61bdda87
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration yes_no -> org.hibernate.type.YesNoType@3aa368a4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration byte -> org.hibernate.type.ByteType@6ad29f56
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration byte -> org.hibernate.type.ByteType@6ad29f56
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@6ad29f56
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration character -> org.hibernate.type.CharacterType@2585899a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration char -> org.hibernate.type.CharacterType@2585899a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@2585899a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration short -> org.hibernate.type.ShortType@5069958d
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration short -> org.hibernate.type.ShortType@5069958d
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@5069958d
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration integer -> org.hibernate.type.IntegerType@60e70884
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration int -> org.hibernate.type.IntegerType@60e70884
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@60e70884
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration long -> org.hibernate.type.LongType@3103dc71
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration long -> org.hibernate.type.LongType@3103dc71
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Long -> org.hibernate.type.LongType@3103dc71
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration float -> org.hibernate.type.FloatType@34be77d8
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration float -> org.hibernate.type.FloatType@34be77d8
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@34be77d8
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration double -> org.hibernate.type.DoubleType@1d2ab9ab
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration double -> org.hibernate.type.DoubleType@1d2ab9ab
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@1d2ab9ab
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@7fd44282
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@7fd44282
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@7dc72b45
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@7dc72b45
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration string -> org.hibernate.type.StringType@c209819
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.String -> org.hibernate.type.StringType@c209819
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration url -> org.hibernate.type.UrlType@4d7c58fe
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.net.URL -> org.hibernate.type.UrlType@4d7c58fe
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration date -> org.hibernate.type.DateType@455554c1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Date -> org.hibernate.type.DateType@455554c1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration time -> org.hibernate.type.TimeType@24db4002
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@24db4002
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration timestamp -> org.hibernate.type.TimestampType@30350fc4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@30350fc4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@30350fc4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@3eb60b56
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration calendar -> org.hibernate.type.CalendarType@561f2f76
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@561f2f76
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@561f2f76
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@9454326
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration locale -> org.hibernate.type.LocaleType@3a9280d0
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@3a9280d0
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration currency -> org.hibernate.type.CurrencyType@55a76fe3
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@55a76fe3
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration timezone -> org.hibernate.type.TimeZoneType@65eaba6a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@65eaba6a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration class -> org.hibernate.type.ClassType@6d04bceb
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@6d04bceb
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5a3dfc08
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5a3dfc08
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@267fe9b1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@5bad2ad6
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration binary -> org.hibernate.type.BinaryType@23815aa4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration byte[] -> org.hibernate.type.BinaryType@23815aa4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration [B -> org.hibernate.type.BinaryType@23815aa4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@372e71a4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@372e71a4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@372e71a4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration image -> org.hibernate.type.ImageType@144e5ea5
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration characters -> org.hibernate.type.CharArrayType@62461fc6
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration char[] -> org.hibernate.type.CharArrayType@62461fc6
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration [C -> org.hibernate.type.CharArrayType@62461fc6
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@239190ce
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@239190ce
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@239190ce
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration text -> org.hibernate.type.TextType@2042ae49
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration blob -> org.hibernate.type.BlobType@410ed079
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@410ed079
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@606e76b4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration wrapper_materialized_blob -> org.hibernate.type.WrappedMaterializedBlobType@6b118a2d
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration clob -> org.hibernate.type.ClobType@65cc55e
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@65cc55e
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@3863d857
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration wrapper_characters_clob -> org.hibernate.type.CharacterArrayClobType@5bc6b1b4
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration characters_clob -> org.hibernate.type.PrimitiveCharacterArrayClobType@37b55ca1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration serializable -> org.hibernate.type.SerializableType@58943431
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration object -> org.hibernate.type.ObjectType@48e9afa1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@48e9afa1
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@47ace768
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@288c819b
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@2090fbe9
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@e8a8eb3
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@2a9e913a
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@10508cb2
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1845027c
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@5aa62756
+DEBUG [Test worker] (BasicTypeRegistry.java:147) - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@5260ad98
+ INFO [Test worker] (BasicTypeRegistry.java:150) - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@606e76b4
+DEBUG [Test worker] (SessionFactoryImpl.java:228) - Session factory constructed with filter configurations : {}
+DEBUG [Test worker] (SessionFactoryImpl.java:232) - instantiating session factory with properties: {java.vendor=Oracle Corporation, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.connection.characterEncoding=UTF-8, hibernate.connection.charset=UTF-8, os.name=Windows 7, sun.boot.class.path=C:\Program Files\Java\jdk1.7.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_25\jre\classes, hibernate.current_session_context_class=thread, sun.desktop=windows, hibernate.c3p0.max_size=5, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_25-b16, hibernate.c3p0.min_size=1, user.name=Dimon, hibernate.c3p0.timeout=300, user.language=ru, sun.boot.library.path=C:\Program Files\Java\jdk1.7.0_25\jre\bin, java.version=1.7.0_25, user.timezone=Europe/Helsinki, sun.arch.data.model=64, java.endorsed.dirs=C:\Program Files\Java\jdk1.7.0_25\jre\lib\endorsed, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1251, file.encoding.pkg=sun.io, file.separator=\, java.specification.name=Java Platform API Specification, java.class.version=51.0, user.country=RU, java.home=C:\Program Files\Java\jdk1.7.0_25\jre, java.vm.info=mixed mode, os.version=6.1, hibernate.transaction.factory_class=org.springframework.orm.hibernate3.SpringTransactionFactory, path.separator=;, java.vm.version=23.25-b01, user.variant=, java.awt.printerjob=sun.awt.windows.WPrinterJob, hibernate.order_updates=true, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.windows.WToolkit, hibernate.c3po.acquire_increment=1, user.script=, hibernate.check_nullability=false, user.home=C:\Users\Dimon, java.specification.vendor=Oracle Corporation, hibernate.hbm2ddl.auto=update, org.gradle.test.worker=1, java.library.path=C:\Program Files\Java\jdk1.7.0_25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files (x86)\scala\bin;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files (x86)\Skype\Phone\;C:\opscode\chef\bin;C:\opscode\chef\embedded\bin;C:\HashiCorp\Vagrant\bin;C:\Program Files\NetBeans 8.0.1\java\maven\bin;., java.vendor.url=http://java.oracle.com/, java.vm.vendor=Oracle Corporation, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=jarjar.org.gradle.process.internal.launcher.GradleWorkerMain 'Gradle Test Executor 1', java.class.path=G:\Java_Project\FilesProcessing\build\classes\test;G:\Java_Project\FilesProcessing\build\resources\test;G:\Java_Project\FilesProcessing\build\classes\main;G:\Java_Project\FilesProcessing\build\resources\main;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\log4j\log4j\1.2.17\5af35056b4d257e4b64b9e8069c0746e8b08629f\log4j-1.2.17.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\3.2.7.RELEASE\ce916b6ac588a9e19b38ba08174b7765c9874f94\spring-aop-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aspects\3.2.7.RELEASE\24f2fe3b54eb7758a94a3b1cb0cc7523eaa48c02\spring-aspects-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\3.2.7.RELEASE\cdb6539cbf9435e58f99a599a777d6843eafeb2a\spring-beans-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\3.2.7.RELEASE\ec83f7b421233c0590f26256dad934bb7a407848\spring-context-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context-support\3.2.7.RELEASE\7336be4986fd9f28b79a6e01ad77cbc64695b513\spring-context-support-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\3.2.7.RELEASE\92728cc10f63c1c0ca0d76b29daf324d0eb700f1\spring-core-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\3.2.7.RELEASE\54b8c4506f71616f3fa7e612f29a86877ddde22d\spring-expression-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-instrument\3.2.7.RELEASE\b737fb6ed3b7d4cc179e667c6e60498b3b822fa7\spring-instrument-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\3.2.7.RELEASE\6ead1b65801eef96629a761099fae112bda35f76\spring-jdbc-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jms\3.2.7.RELEASE\1c7b6412be3c72f9f04a1989165145354b6b6ad\spring-jms-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-orm\3.2.7.RELEASE\4724ae44ec5c62d4f6664a8822d1ebcc22cd3e10\spring-orm-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-oxm\3.2.7.RELEASE\2c7b3df608636da7528a4ff2bda8d6e8d2c62c3d\spring-oxm-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-struts\3.2.7.RELEASE\ef2ca0c73449cf31b59f05f8a03d45c18ee74ea3\spring-struts-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-test\3.2.7.RELEASE\170c32a8a67081aacc948fd2d6c5ad334a6e9c63\spring-test-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\3.2.7.RELEASE\baf8bd10d3cca82b0ab86fb2a5105403a6fb66fc\spring-tx-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-core\3.6.3.Final\eb8593da2d51f84f0c0c2293f52a02aa1f1067ab\hibernate-core-3.6.3.Final.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-annotations\3.3.1.GA\2083b277c76037253189d17e68ba86d2da478440\hibernate-annotations-3.3.1.GA.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-commons-annotations\3.2.0.Final\ce990611448fc2865469e3b68d2fe76b050e3c4f\hibernate-commons-annotations-3.2.0.Final.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\javassist\javassist\3.12.1.GA\526633327faa61aee448a519e8a4d53ec3057885\javassist-3.12.1.GA.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-validator\5.0.1.Final\542a45c94ff8a7551779caaaffd3857d643b9087\hibernate-validator-5.0.1.Final.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\postgresql\postgresql\9.1-901-1.jdbc4\9bfabe48876ec38f6cbaa6931bad05c64a9ea942\postgresql-9.1-901-1.jdbc4.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-log4j12\1.7.21\7238b064d1aba20da2ac03217d700d91e02460fa\slf4j-log4j12-1.7.21.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.codehaus.castor\castor\1.2\351847d8a41175565b5faa54fab42fe20fe6cc91\castor-1.2.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\xerces\xercesImpl\2.8.1\25101e37ec0c907db6f0612cbf106ee519c1aef1\xercesImpl-2.8.1.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\junit\junit\4.10\e4f1766ce7404a08f45d859fb9c226fc9e41a861\junit-4.10.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\aopalliance\aopalliance\1.0\235ba8b489512805ac13a8f9ea77a1ca5ebe3e8\aopalliance-1.0.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.7.2\d3b191a99d2c34dfd5311ef3110f096f5bc0a10e\aspectjweaver-1.7.2.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.1\5043bfebc3db072ed80fbd362e7caf00e885d8ae\commons-logging-1.1.1.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\commons-beanutils\commons-beanutils\1.7.0\5675fd96b29656504b86029551973d60fb41339b\commons-beanutils-1.7.0.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\3.2.7.RELEASE\d239d8264488b8fe3bb9a50728a1dfa8915f1aa\spring-web-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\3.2.7.RELEASE\ace95dad73b7276754fbcc80e95a8fbbe18123b6\spring-webmvc-3.2.7.RELEASE.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\struts\struts\1.2.9\1d772f30aff9ae4af06e3e4893fbc116619f2bed\struts-1.2.9.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\antlr\antlr\2.7.6\cf4f67dae5df4f9932ae7810f4548ef3e14dd35e\antlr-2.7.6.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\commons-collections\commons-collections\3.1\40fb048097caeacdb11dbb33b5755854d89efdeb\commons-collections-3.1.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\dom4j\dom4j\1.6.1\5d3ccc056b6f056dbf0dddfdf43894b9065a8f94\dom4j-1.6.1.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\1.0.0.Final\6728add2c60f6621c3a77ba71fe6f6b798d14ee0\hibernate-jpa-2.0-api-1.0.0.Final.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\javax.transaction\jta\1.1\2ca09f0b36ca7d71b762e14ea2ff09d5eac57558\jta-1.1.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate\3.2.6.ga\dd982c3d5c28c956aa4fa9112258cb3013606ddd\hibernate-3.2.6.ga.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.hibernate\ejb3-persistence\1.0.1.GA\f502b2c96c95e087435c79d3d6c9aa85bb1154bc\ejb3-persistence-1.0.1.GA.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\javax.validation\validation-api\1.1.0.Final\8613ae82954779d518631e05daa73a6a954817d5\validation-api-1.1.0.Final.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.1.1.GA\7fb1a7eb7ff1d15cac1802510fee65c7ca31a869\jboss-logging-3.1.1.GA.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\0.8.0\27426d4fca7adcda34f536e32d6189566a2929f0\classmate-0.8.0.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\xml-apis\xml-apis\1.3.03\3845d5aabd62dc1954f2c0e84a799068c917ad2b\xml-apis-1.3.03.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.1\860340562250678d1a344907ac75754e259cdb14\hamcrest-core-1.1.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\commons-digester\commons-digester\1.6\e2822f655f2c182681c2cf27f224a425ccb2983d\commons-digester-1.6.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\commons-fileupload\commons-fileupload\1.0\2366159e25523d99e96d05211a2fa5399c938735\commons-fileupload-1.0.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\commons-validator\commons-validator\1.1.4\1033bc3f5e304f447d7987f0f5db8c6133d9695b\commons-validator-1.1.4.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\oro\oro\2.0.7\f91d4528652d713faa54039b26af468a1229328b\oro-2.0.7.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\xalan\xalan\2.5.1\8ee62aa6e698230994c17deb763f15e9c0c4173e\xalan-2.5.1.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\net.sf.ehcache\ehcache\1.2.3\461752b4e3d73a5815737df243782ac70112b489\ehcache-1.2.3.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\asm\asm-attrs\1.5.3\911ca40cdb527969ee47dc6f782425d94a36b510\asm-attrs-1.5.3.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\cglib\cglib\2.1_3\d3851e366b9fe8b7d8215de0f9eb980b359d8de0\cglib-2.1_3.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\asm\asm\1.5.3\63a2715c39c9e97f88fe371d4441a1b3493d74f9\asm-1.5.3.jar;C:\Users\Dimon\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.21\139535a69a4239db087de9bab0bee568bf8e0b70\slf4j-api-1.7.21.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, hibernate.c3p0.init_size=1, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=, hibernate.connection.provider_class=org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider, java.io.tmpdir=C:\Users\Dimon\AppData\Local\Temp\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, hibernate.default_schema=public, os.arch=amd64, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.ext.dirs=C:\Program Files\Java\jdk1.7.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, hibernate.connection.useUnicode=true, user.dir=G:\Java_Project\FilesProcessing, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding=windows-1251, java.specification.version=1.7, hibernate.c3p0.max_statements=50}
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:90) - Setting dialect [org.hibernate.dialect.PostgreSQLDialect]
+DEBUG [Test worker] (AbstractEntityPersister.java:2952) - Static SQL for entity: com.filesprocessing.domain.Filesprocessing
+DEBUG [Test worker] (AbstractEntityPersister.java:2957) -  Version select: select id from public.Filesprocessing where id =?
+DEBUG [Test worker] (AbstractEntityPersister.java:2960) -  Snapshot select: select filesproce_.id, filesproce_.content as content0_, filesproce_.creationdate as creation3_0_, filesproce_.procdate as procdate0_ from public.Filesprocessing filesproce_ where filesproce_.id=?
+DEBUG [Test worker] (AbstractEntityPersister.java:2963) -  Insert 0: insert into public.Filesprocessing (content, creationdate, procdate, id) values (?, ?, ?, ?)
+DEBUG [Test worker] (AbstractEntityPersister.java:2964) -  Update 0: update public.Filesprocessing set content=?, creationdate=?, procdate=? where id=?
+DEBUG [Test worker] (AbstractEntityPersister.java:2965) -  Delete 0: delete from public.Filesprocessing where id=?
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [NONE]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=?
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [READ]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=?
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [UPGRADE]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=? for update
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [UPGRADE_NOWAIT]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=? for update
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [FORCE]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=? for update
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [PESSIMISTIC_READ]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=? for share
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [PESSIMISTIC_WRITE]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=? for update
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [PESSIMISTIC_FORCE_INCREMENT]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=? for update
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [OPTIMISTIC]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=?
+DEBUG [Test worker] (EntityLoader.java:123) - Static select for entity com.filesprocessing.domain.Filesprocessing [OPTIMISTIC_FORCE_INCREMENT]: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=?
+DEBUG [Test worker] (CascadeEntityLoader.java:56) - Static select for action ACTION_MERGE on entity com.filesprocessing.domain.Filesprocessing: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=?
+DEBUG [Test worker] (CascadeEntityLoader.java:56) - Static select for action ACTION_REFRESH on entity com.filesprocessing.domain.Filesprocessing: select filesproce0_.id as id0_0_, filesproce0_.content as content0_0_, filesproce0_.creationdate as creation3_0_0_, filesproce0_.procdate as procdate0_0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=?
+DEBUG [Test worker] (SessionFactoryObjectFactory.java:61) - initializing class SessionFactoryObjectFactory
+DEBUG [Test worker] (SessionFactoryObjectFactory.java:99) - registered: 1b2175f9-720e-49d7-aea3-dda979ee1849 (unnamed)
+ INFO [Test worker] (SessionFactoryObjectFactory.java:105) - Not binding factory to JNDI, no JNDI name configured
+DEBUG [Test worker] (SessionFactoryImpl.java:369) - instantiated session factory
+ INFO [Test worker] (SchemaUpdate.java:155) - Running hbm2ddl schema update
+ INFO [Test worker] (SchemaUpdate.java:167) - fetching database metadata
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+ INFO [Test worker] (SchemaUpdate.java:179) - updating schema
+DEBUG [Test worker] (Configuration.java:3968) - Processing hbm.xml files
+DEBUG [Test worker] (Configuration.java:3998) - Process annotated classes
+DEBUG [Test worker] (Configuration.java:1439) - processing fk mappings (*ToOne and JoinedSubclass)
+DEBUG [Test worker] (Configuration.java:1681) - processing extends queue
+DEBUG [Test worker] (Configuration.java:1735) - processing extends queue
+DEBUG [Test worker] (Configuration.java:1684) - processing collection mappings
+DEBUG [Test worker] (Configuration.java:1694) - processing native query and ResultSetMapping mappings
+DEBUG [Test worker] (Configuration.java:1702) - processing association property references
+DEBUG [Test worker] (Configuration.java:1724) - processing foreign key constraints
+DEBUG [Test worker] (DefaultTraversableResolver.java:106) - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+DEBUG [Test worker] (DefaultTraversableResolver.java:117) - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+DEBUG [Test worker] (ValidationXmlParser.java:88) - Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG [Test worker] (ValidationXmlParser.java:95) - No META-INF/validation.xml found. Using annotation based configuration only.
+ INFO [Test worker] (TableMetadata.java:65) - table found: public.filesprocessing
+ INFO [Test worker] (TableMetadata.java:66) - columns: [content, id, procdate, creationdate]
+ INFO [Test worker] (TableMetadata.java:68) - foreign keys: []
+ INFO [Test worker] (TableMetadata.java:69) - indexes: [filesprocessing_pkey]
+ INFO [Test worker] (TableMetadata.java:65) - table found: public.filesprocessing
+ INFO [Test worker] (TableMetadata.java:66) - columns: [content, id, procdate, creationdate]
+ INFO [Test worker] (TableMetadata.java:68) - foreign keys: []
+ INFO [Test worker] (TableMetadata.java:69) - indexes: [filesprocessing_pkey]
+DEBUG [Test worker] (DefaultIdentifierGeneratorFactory.java:90) - Setting dialect [org.hibernate.dialect.PostgreSQLDialect]
+ INFO [Test worker] (SchemaUpdate.java:217) - schema update complete
+DEBUG [Test worker] (SessionFactoryImpl.java:539) - Checking 0 named HQL queries
+DEBUG [Test worker] (SessionFactoryImpl.java:559) - Checking 0 named SQL queries
+ INFO [Test worker] (AbstractApplicationContext.java:1374) - Bean 'sessionFactory' of type [class org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'sessionFactory'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG [Test worker] (AbstractApplicationContext.java:807) - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@4df81e08]
+DEBUG [Test worker] (AbstractApplicationContext.java:831) - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@2dc348aa]
+ INFO [Test worker] (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@50137215: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,filesProcessingDAOImpl,filesProcessingService,configProperties,configuration,filesListener,castorMarshaller,xmlConverter,dataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,hibernateTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'filesProcessingDAOImpl'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'filesProcessingDAOImpl'
+DEBUG [Test worker] (InjectionMetadata.java:71) - Registered injected element on class [com.filesprocessing.dao.impl.FilesProcessingDAOImpl]: AutowiredFieldElement for private org.springframework.orm.hibernate3.HibernateTemplate com.filesprocessing.dao.impl.FilesProcessingDAOImpl.hibernateTemplate
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'filesProcessingDAOImpl' to allow for resolving potential circular references
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'filesProcessingDAOImpl': AutowiredFieldElement for private org.springframework.orm.hibernate3.HibernateTemplate com.filesprocessing.dao.impl.FilesProcessingDAOImpl.hibernateTemplate
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'hibernateTemplate'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'hibernateTemplate'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'hibernateTemplate' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'sessionFactory'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' to allow for resolving potential circular references
+DEBUG [Test worker] (BeanFactoryAdvisorRetrievalHelper.java:87) - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:1555) - Invoking afterPropertiesSet() on bean with name 'hibernateTemplate'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'hibernateTemplate'
+DEBUG [Test worker] (AutowiredAnnotationBeanPostProcessor.java:436) - Autowiring by type from bean name 'filesProcessingDAOImpl' to bean named 'hibernateTemplate'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (JdkDynamicAopProxy.java:115) - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [com.filesprocessing.dao.impl.FilesProcessingDAOImpl@33bbaf82]
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'filesProcessingDAOImpl'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'filesProcessingService'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'filesProcessingService'
+DEBUG [Test worker] (InjectionMetadata.java:71) - Registered injected element on class [com.filesprocessing.service.FilesProcessingService]: AutowiredFieldElement for private com.filesprocessing.dao.FilesProcessingDAO com.filesprocessing.service.FilesProcessingService.filesProcDAO
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'filesProcessingService' to allow for resolving potential circular references
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'filesProcessingService': AutowiredFieldElement for private com.filesprocessing.dao.FilesProcessingDAO com.filesprocessing.service.FilesProcessingService.filesProcDAO
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'filesProcessingDAOImpl'
+DEBUG [Test worker] (AutowiredAnnotationBeanPostProcessor.java:436) - Autowiring by type from bean name 'filesProcessingService' to bean named 'filesProcessingDAOImpl'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractFallbackTransactionAttributeSource.java:107) - Adding transactional method 'FilesProcessingService.add' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (AbstractAutoProxyCreator.java:538) - Creating implicit proxy for bean 'filesProcessingService' with 0 common interceptors and 1 specific interceptors
+DEBUG [Test worker] (CglibAopProxy.java:155) - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.filesprocessing.service.FilesProcessingService@16017c47]
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:1555) - Invoking afterPropertiesSet() on bean with name 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: public void com.filesprocessing.service.FilesProcessingService.add(com.filesprocessing.domain.Filesprocessing)
+DEBUG [Test worker] (AbstractFallbackTransactionAttributeSource.java:107) - Adding transactional method 'FilesProcessingService.delete' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: public void com.filesprocessing.service.FilesProcessingService.delete(com.filesprocessing.domain.Filesprocessing)
+DEBUG [Test worker] (AbstractFallbackTransactionAttributeSource.java:107) - Adding transactional method 'FilesProcessingService.update' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: public void com.filesprocessing.service.FilesProcessingService.update(com.filesprocessing.domain.Filesprocessing)
+DEBUG [Test worker] (AbstractFallbackTransactionAttributeSource.java:107) - Adding transactional method 'FilesProcessingService.getAll' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: public java.util.List com.filesprocessing.service.FilesProcessingService.getAll()
+DEBUG [Test worker] (AbstractFallbackTransactionAttributeSource.java:107) - Adding transactional method 'FilesProcessingService.getFilesProcessingBetweenDate' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: public java.util.List com.filesprocessing.service.FilesProcessingService.getFilesProcessingBetweenDate(java.util.Date[])
+DEBUG [Test worker] (AbstractFallbackTransactionAttributeSource.java:107) - Adding transactional method 'FilesProcessingService.getFilesProcessingById' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: public java.util.List com.filesprocessing.service.FilesProcessingService.getFilesProcessingById(java.lang.Long)
+DEBUG [Test worker] (AbstractFallbackTransactionAttributeSource.java:107) - Adding transactional method 'FilesProcessingService.getFilesProcessingByDate' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: public java.util.List com.filesprocessing.service.FilesProcessingService.getFilesProcessingByDate(java.util.Date)
+DEBUG [Test worker] (CglibAopProxy.java:762) - Found finalize() method - using NO_OVERRIDE
+DEBUG [Test worker] (CglibAopProxy.java:774) - Found 'equals' method: public boolean java.lang.Object.equals(java.lang.Object)
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: public java.lang.String java.lang.Object.toString()
+DEBUG [Test worker] (CglibAopProxy.java:779) - Found 'hashCode' method: public native int java.lang.Object.hashCode()
+DEBUG [Test worker] (CglibAopProxy.java:811) - Unable to apply any optimisations to advised method: protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.springframework.aop.Advisor)
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.aopalliance.aop.Advice)
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isFrozen()
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract org.springframework.aop.TargetSource org.springframework.aop.framework.Advised.getTargetSource()
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setTargetSource(org.springframework.aop.TargetSource)
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setPreFiltered(boolean)
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isProxyTargetClass()
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setExposeProxy(boolean)
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isExposeProxy()
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(int,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(int,org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract org.springframework.aop.Advisor[] org.springframework.aop.framework.Advised.getAdvisors()
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvice(org.aopalliance.aop.Advice)
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isPreFiltered()
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract java.lang.Class[] org.springframework.aop.framework.Advised.getProxiedInterfaces()
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isInterfaceProxied(java.lang.Class)
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.removeAdvisor(int) throws org.springframework.aop.framework.AopConfigException
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvisor(org.springframework.aop.Advisor)
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.replaceAdvisor(org.springframework.aop.Advisor,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract java.lang.String org.springframework.aop.framework.Advised.toProxyConfigString()
+DEBUG [Test worker] (CglibAopProxy.java:768) - Method is declared on Advised interface: public abstract java.lang.Class org.springframework.aop.TargetClassAware.getTargetClass()
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'filesProcessingService'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'configProperties'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'configuration'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'configuration'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'configuration' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'configuration'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'filesListener'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'filesListener'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'configuration'
+DEBUG [Test worker] (InitDestroyAnnotationBeanPostProcessor.java:208) - Found destroy method on class [com.filesprocessing.listener.FilesListener]: public void com.filesprocessing.listener.FilesListener.shutDown()
+DEBUG [Test worker] (InitDestroyAnnotationBeanPostProcessor.java:278) - Registered destroy method on class [com.filesprocessing.listener.FilesListener]: org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement@f5d97a76
+DEBUG [Test worker] (InjectionMetadata.java:71) - Registered injected element on class [com.filesprocessing.listener.FilesListener]: AutowiredFieldElement for private com.filesprocessing.service.FilesProcessingService com.filesprocessing.listener.FilesListener.fileProcService
+DEBUG [Test worker] (InjectionMetadata.java:71) - Registered injected element on class [com.filesprocessing.listener.FilesListener]: AutowiredFieldElement for private com.filesprocessing.utils.XMLConverter com.filesprocessing.listener.FilesListener.xmlConverter
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'filesListener' to allow for resolving potential circular references
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'filesListener': AutowiredFieldElement for private com.filesprocessing.service.FilesProcessingService com.filesprocessing.listener.FilesListener.fileProcService
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'filesProcessingService'
+DEBUG [Test worker] (AutowiredAnnotationBeanPostProcessor.java:436) - Autowiring by type from bean name 'filesListener' to bean named 'filesProcessingService'
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'filesListener': AutowiredFieldElement for private com.filesprocessing.utils.XMLConverter com.filesprocessing.listener.FilesListener.xmlConverter
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'xmlConverter'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'xmlConverter'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'xmlConverter' to allow for resolving potential circular references
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'castorMarshaller'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'castorMarshaller'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'castorMarshaller' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:1555) - Invoking afterPropertiesSet() on bean with name 'castorMarshaller'
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (XMLParserUtils.java:124) - Successfully instantiated a JAXP SAXParser instance.
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MappingRoot found: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MappingRoot found: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.ClassLoader to value: sun.misc.Launcher$AppClassLoader@4e836869
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MappingRoot found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByMappingLoader resolving: org.exolab.castor.mapping.xml.MappingRoot
+DEBUG [Test worker] (ByMappingLoader.java:58) - No mapping loader specified
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MappingRoot found: null
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByCDR resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByPackageMapping resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MappingRoot found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByDescriptorClass resolving: org.exolab.castor.mapping.xml.MappingRoot
+DEBUG [Test worker] (ResolveHelpers.java:143) - Ignored problem at loading class: org.exolab.castor.mapping.xml.MappingRootDescriptor through class loader: sun.misc.Launcher$AppClassLoader@4e836869, exception: java.lang.ClassNotFoundException: org.exolab.castor.mapping.xml.MappingRootDescriptor
+DEBUG [Test worker] (ByDescriptorClass.java:83) - Found descriptor: class org.exolab.castor.mapping.xml.descriptors.MappingRootDescriptor
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:459) - Adding descriptor class for: org.exolab.castor.mapping.xml.MappingRoot descriptor: org.exolab.castor.mapping.xml.descriptors.MappingRootDescriptor@7e3468b1; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MappingRoot found: org.exolab.castor.mapping.xml.descriptors.MappingRootDescriptor@7e3468b1; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.ClassMapping found: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.ClassMapping found: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.ClassLoader to value: sun.misc.Launcher$AppClassLoader@4e836869
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.ClassMapping found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByMappingLoader resolving: org.exolab.castor.mapping.xml.ClassMapping
+DEBUG [Test worker] (ByMappingLoader.java:58) - No mapping loader specified
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.ClassMapping found: null
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByCDR resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByPackageMapping resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.ClassMapping found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByDescriptorClass resolving: org.exolab.castor.mapping.xml.ClassMapping
+DEBUG [Test worker] (ResolveHelpers.java:143) - Ignored problem at loading class: org.exolab.castor.mapping.xml.ClassMappingDescriptor through class loader: sun.misc.Launcher$AppClassLoader@4e836869, exception: java.lang.ClassNotFoundException: org.exolab.castor.mapping.xml.ClassMappingDescriptor
+DEBUG [Test worker] (ByDescriptorClass.java:83) - Found descriptor: class org.exolab.castor.mapping.xml.descriptors.ClassMappingDescriptor
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:459) - Adding descriptor class for: org.exolab.castor.mapping.xml.ClassMapping descriptor: org.exolab.castor.mapping.xml.descriptors.ClassMappingDescriptor@e5e2bd7; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.ClassMapping found: org.exolab.castor.mapping.xml.descriptors.ClassMappingDescriptor@e5e2bd7; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MapTo found: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MapTo found: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.ClassLoader to value: sun.misc.Launcher$AppClassLoader@4e836869
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MapTo found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByMappingLoader resolving: org.exolab.castor.mapping.xml.MapTo
+DEBUG [Test worker] (ByMappingLoader.java:58) - No mapping loader specified
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MapTo found: null
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByCDR resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByPackageMapping resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MapTo found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByDescriptorClass resolving: org.exolab.castor.mapping.xml.MapTo
+DEBUG [Test worker] (ResolveHelpers.java:143) - Ignored problem at loading class: org.exolab.castor.mapping.xml.MapToDescriptor through class loader: sun.misc.Launcher$AppClassLoader@4e836869, exception: java.lang.ClassNotFoundException: org.exolab.castor.mapping.xml.MapToDescriptor
+DEBUG [Test worker] (ByDescriptorClass.java:83) - Found descriptor: class org.exolab.castor.mapping.xml.descriptors.MapToDescriptor
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:459) - Adding descriptor class for: org.exolab.castor.mapping.xml.MapTo descriptor: org.exolab.castor.mapping.xml.descriptors.MapToDescriptor@76966a1d; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.MapTo found: org.exolab.castor.mapping.xml.descriptors.MapToDescriptor@76966a1d; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (UnmarshalHandler.java:2019) - #container: _classChoice
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.FieldMapping found: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.FieldMapping found: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.ClassLoader to value: sun.misc.Launcher$AppClassLoader@4e836869
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.FieldMapping found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByMappingLoader resolving: org.exolab.castor.mapping.xml.FieldMapping
+DEBUG [Test worker] (ByMappingLoader.java:58) - No mapping loader specified
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.FieldMapping found: null
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByCDR resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByPackageMapping resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.FieldMapping found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByDescriptorClass resolving: org.exolab.castor.mapping.xml.FieldMapping
+DEBUG [Test worker] (ResolveHelpers.java:143) - Ignored problem at loading class: org.exolab.castor.mapping.xml.FieldMappingDescriptor through class loader: sun.misc.Launcher$AppClassLoader@4e836869, exception: java.lang.ClassNotFoundException: org.exolab.castor.mapping.xml.FieldMappingDescriptor
+DEBUG [Test worker] (ByDescriptorClass.java:83) - Found descriptor: class org.exolab.castor.mapping.xml.descriptors.FieldMappingDescriptor
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:459) - Adding descriptor class for: org.exolab.castor.mapping.xml.FieldMapping descriptor: org.exolab.castor.mapping.xml.descriptors.FieldMappingDescriptor@406f1e65; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.FieldMapping found: org.exolab.castor.mapping.xml.descriptors.FieldMappingDescriptor@406f1e65; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.BindXml found: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.BindXml found: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.ClassLoader to value: sun.misc.Launcher$AppClassLoader@4e836869
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: null
+DEBUG [Test worker] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@53bd822b
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.BindXml found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByMappingLoader resolving: org.exolab.castor.mapping.xml.BindXml
+DEBUG [Test worker] (ByMappingLoader.java:58) - No mapping loader specified
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.BindXml found: null
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByCDR resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByPackageMapping resolving: org.exolab.castor.mapping.xml
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.BindXml found: null
+DEBUG [Test worker] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByDescriptorClass resolving: org.exolab.castor.mapping.xml.BindXml
+DEBUG [Test worker] (ResolveHelpers.java:143) - Ignored problem at loading class: org.exolab.castor.mapping.xml.BindXmlDescriptor through class loader: sun.misc.Launcher$AppClassLoader@4e836869, exception: java.lang.ClassNotFoundException: org.exolab.castor.mapping.xml.BindXmlDescriptor
+DEBUG [Test worker] (ByDescriptorClass.java:83) - Found descriptor: class org.exolab.castor.mapping.xml.descriptors.BindXmlDescriptor
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:459) - Adding descriptor class for: org.exolab.castor.mapping.xml.BindXml descriptor: org.exolab.castor.mapping.xml.descriptors.BindXmlDescriptor@78b15cbb; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.BindXml found: org.exolab.castor.mapping.xml.descriptors.BindXmlDescriptor@78b15cbb; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (UnmarshalHandler.java:2019) - #container: _classChoice
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.FieldMapping found: org.exolab.castor.mapping.xml.descriptors.FieldMappingDescriptor@406f1e65; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.FieldMapping found: org.exolab.castor.mapping.xml.descriptors.FieldMappingDescriptor@406f1e65; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.BindXml found: org.exolab.castor.mapping.xml.descriptors.BindXmlDescriptor@78b15cbb; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: org.exolab.castor.mapping.xml.BindXml found: org.exolab.castor.mapping.xml.descriptors.BindXmlDescriptor@78b15cbb; descriptor for class: [null]; xml name: null
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:459) - Adding descriptor class for: com.filesprocessing.domain.Filesprocessing descriptor: org.exolab.castor.xml.util.XMLClassDescriptorAdapter@b5bc2c1; descriptor for class: com.filesprocessing.domain.Filesprocessing; xml name: Entry
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'castorMarshaller'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'castorMarshaller'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'xmlConverter'
+DEBUG [Test worker] (AutowiredAnnotationBeanPostProcessor.java:436) - Autowiring by type from bean name 'filesListener' to bean named 'xmlConverter'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'filesListener'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'castorMarshaller'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'xmlConverter'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'dataSource'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'sessionFactory'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (DefaultSingletonBeanRegistry.java:215) - Creating shared instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:432) - Creating instance of bean 'transactionManager'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:506) - Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'sessionFactory'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:1555) - Invoking afterPropertiesSet() on bean with name 'transactionManager'
+ INFO [Test worker] (HibernateTransactionManager.java:416) - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@36bbb2f5] of Hibernate SessionFactory for HibernateTransactionManager
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractAutowireCapableBeanFactory.java:460) - Finished creating instance of bean 'transactionManager'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'hibernateTemplate'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG [Test worker] (AbstractApplicationContext.java:858) - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@21b63266]
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG [Test worker] (PropertySourcesPropertyResolver.java:81) - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+DEBUG [Test worker] (PropertySourcesPropertyResolver.java:81) - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+DEBUG [Test worker] (PropertySourcesPropertyResolver.java:103) - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+DEBUG [Test worker] (CacheAwareContextLoaderDelegate.java:93) - Storing ApplicationContext in cache under key [[MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesListenerTest': AutowiredFieldElement for private com.filesprocessing.listener.FilesListener com.filesprocessing.test.FilesListenerTest.fl
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'filesListener'
+DEBUG [Test worker] (AutowiredAnnotationBeanPostProcessor.java:436) - Autowiring by type from bean name 'com.filesprocessing.test.FilesListenerTest' to bean named 'filesListener'
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesListenerTest': AutowiredFieldElement for private com.filesprocessing.configuration.Configuration com.filesprocessing.test.FilesListenerTest.configuration
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'configuration'
+DEBUG [Test worker] (AutowiredAnnotationBeanPostProcessor.java:436) - Autowiring by type from bean name 'com.filesprocessing.test.FilesListenerTest' to bean named 'configuration'
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesListenerTest': AutowiredFieldElement for com.filesprocessing.utils.XMLConverter com.filesprocessing.test.FilesListenerTest.converter
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'xmlConverter'
+DEBUG [Test worker] (AutowiredAnnotationBeanPostProcessor.java:436) - Autowiring by type from bean name 'com.filesprocessing.test.FilesListenerTest' to bean named 'xmlConverter'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (XMLContext.java:162) - Creating new Marshaller instance.
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (Marshaller.java:815) - Marshalling com.filesprocessing.domain.Filesprocessing
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: com.filesprocessing.domain.Filesprocessing found: org.exolab.castor.xml.util.XMLClassDescriptorAdapter@b5bc2c1; descriptor for class: com.filesprocessing.domain.Filesprocessing; xml name: Entry
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: com.filesprocessing.domain.Filesprocessing found: org.exolab.castor.xml.util.XMLClassDescriptorAdapter@b5bc2c1; descriptor for class: com.filesprocessing.domain.Filesprocessing; xml name: Entry
+ INFO [Test worker] (FilesListener.java:46) - Start find files...
+ INFO [Test worker] (FilesListener.java:59) - Find a file for processing: src\test\resources\inp\inp.xml
+ INFO [pool-1-thread-1] (FilesListener.java:76) - Start processing parsing file: inp.xml
+DEBUG [pool-1-thread-1] (XMLContext.java:177) - Creating new Unmarshaller instance.
+DEBUG [pool-1-thread-1] (XMLParserUtils.java:124) - Successfully instantiated a JAXP SAXParser instance.
+DEBUG [pool-1-thread-1] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [pool-1-thread-1] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [pool-1-thread-1] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+ INFO [pool-1-thread-1] (FilesListener.java:78) - End processing parsing file: inp.xml
+ INFO [pool-1-thread-1] (FilesListener.java:79) - Start saving finded object into DB.
+DEBUG [pool-1-thread-1] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [pool-1-thread-1] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.add]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [pool-1-thread-1] (SessionImpl.java:265) - opened session at timestamp: 14624833245
+DEBUG [pool-1-thread-1] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@7cc8ff30] for Hibernate transaction
+DEBUG [pool-1-thread-1] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@7cc8ff30]
+DEBUG [pool-1-thread-1] (JDBCTransaction.java:78) - begin
+DEBUG [pool-1-thread-1] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [pool-1-thread-1] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [pool-1-thread-1] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [pool-1-thread-1] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [pool-1-thread-1] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@1cc7580f]
+DEBUG [pool-1-thread-1] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [pool-1-thread-1] (IncrementGenerator.java:123) - fetching initial value: select max(id) from public.Filesprocessing
+DEBUG [pool-1-thread-1] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [pool-1-thread-1] (SQLStatementLogger.java:111) - select max(id) from public.Filesprocessing
+DEBUG [pool-1-thread-1] (IncrementGenerator.java:136) - first free id: 123
+DEBUG [pool-1-thread-1] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [pool-1-thread-1] (AbstractSaveEventListener.java:134) - generated identifier: 123, using strategy: org.hibernate.id.IncrementGenerator
+DEBUG [pool-1-thread-1] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [pool-1-thread-1] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [pool-1-thread-1] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [pool-1-thread-1] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [pool-1-thread-1] (AbstractFlushingEventListener.java:108) - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [pool-1-thread-1] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [pool-1-thread-1] (Printer.java:106) - listing entities:
+DEBUG [pool-1-thread-1] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Some text, id=123, creationDate=null, procDate=Fri May 06 00:22:04 EEST 2016}
+DEBUG [pool-1-thread-1] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [pool-1-thread-1] (SQLStatementLogger.java:111) - insert into public.Filesprocessing (content, creationdate, procdate, id) values (?, ?, ?, ?)
+DEBUG [pool-1-thread-1] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [pool-1-thread-1] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [pool-1-thread-1] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [pool-1-thread-1] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [pool-1-thread-1] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@7cc8ff30]
+DEBUG [pool-1-thread-1] (JDBCTransaction.java:130) - commit
+DEBUG [pool-1-thread-1] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [pool-1-thread-1] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [pool-1-thread-1] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [pool-1-thread-1] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [pool-1-thread-1] (Printer.java:106) - listing entities:
+DEBUG [pool-1-thread-1] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Some text, id=123, creationDate=null, procDate=Fri May 06 00:22:04 EEST 2016}
+DEBUG [pool-1-thread-1] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [pool-1-thread-1] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [pool-1-thread-1] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [pool-1-thread-1] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@7cc8ff30] after transaction
+DEBUG [pool-1-thread-1] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [pool-1-thread-1] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [pool-1-thread-1] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+ INFO [pool-1-thread-1] (FilesListener.java:81) - Save finded object to DB.
+ INFO [pool-1-thread-1] (FilesListener.java:82) - Moving procesed file into src/test/resources/out directory...
+DEBUG [Test worker] (DirtiesContextTestExecutionListener.java:107) - After test method: context [[TestContext@699eb5f6 testClass = FilesListenerTest, testInstance = com.filesprocessing.test.FilesListenerTest@32bc5fa6, testMethod = handlerCorrectFileTest@FilesListenerTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesListenerTest]
+DEBUG [Test worker] (DependencyInjectionTestExecutionListener.java:73) - Performing dependency injection for test context [[TestContext@699eb5f6 testClass = FilesListenerTest, testInstance = com.filesprocessing.test.FilesListenerTest@11bbf66b, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [Test worker] (CacheAwareContextLoaderDelegate.java:104) - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesListenerTest': AutowiredFieldElement for private com.filesprocessing.listener.FilesListener com.filesprocessing.test.FilesListenerTest.fl
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'filesListener'
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesListenerTest': AutowiredFieldElement for private com.filesprocessing.configuration.Configuration com.filesprocessing.test.FilesListenerTest.configuration
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'configuration'
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesListenerTest': AutowiredFieldElement for com.filesprocessing.utils.XMLConverter com.filesprocessing.test.FilesListenerTest.converter
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'xmlConverter'
+DEBUG [Test worker] (XMLContext.java:162) - Creating new Marshaller instance.
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [Test worker] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [Test worker] (Marshaller.java:815) - Marshalling com.filesprocessing.domain.Filesprocessing
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: com.filesprocessing.domain.Filesprocessing found: org.exolab.castor.xml.util.XMLClassDescriptorAdapter@b5bc2c1; descriptor for class: com.filesprocessing.domain.Filesprocessing; xml name: Entry
+DEBUG [Test worker] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: com.filesprocessing.domain.Filesprocessing found: org.exolab.castor.xml.util.XMLClassDescriptorAdapter@b5bc2c1; descriptor for class: com.filesprocessing.domain.Filesprocessing; xml name: Entry
+ INFO [Test worker] (FilesListener.java:46) - Start find files...
+ INFO [Test worker] (FilesListener.java:59) - Find a file for processing: src\test\resources\inp\inp_incorrect.xml
+ INFO [pool-1-thread-2] (FilesListener.java:76) - Start processing parsing file: inp_incorrect.xml
+DEBUG [pool-1-thread-2] (XMLContext.java:177) - Creating new Unmarshaller instance.
+DEBUG [pool-1-thread-2] (XMLParserUtils.java:124) - Successfully instantiated a JAXP SAXParser instance.
+DEBUG [pool-1-thread-2] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/core/castor.core.properties
+DEBUG [pool-1-thread-2] (Configuration.java:190) - Configuration loaded from classpath: /org/castor/xml/castor.xml.properties
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:419) - New instance!
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: java.lang.String found: null
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: org.exolab.castor.xml.XMLMappingLoader@60d1a45a
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@637d425e
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.ClassLoader to value: sun.misc.Launcher$AppClassLoader@4e836869
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.LoadPackageMappings to value: true
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.useIntrospection to value: true
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.MappingLoader to value: org.exolab.castor.xml.XMLMappingLoader@60d1a45a
+DEBUG [pool-1-thread-2] (CastorXMLStrategy.java:65) - Setting property: org.exolab.castor.xml.util.ResolverStrategy.Introspector to value: org.exolab.castor.xml.Introspector@637d425e
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: java.lang.String found: null
+DEBUG [pool-1-thread-2] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByMappingLoader resolving: java.lang.String
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: java.lang.String found: null
+DEBUG [pool-1-thread-2] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByCDR resolving: java.lang
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [pool-1-thread-2] (AbstractResolverPackageCommand.java:53) - Now in resolve method: org.exolab.castor.xml.util.resolvers.ByPackageMapping resolving: java.lang
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: java.lang.String found: null
+DEBUG [pool-1-thread-2] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByDescriptorClass resolving: java.lang.String
+DEBUG [pool-1-thread-2] (ResolveHelpers.java:143) - Ignored problem at loading class: java.lang.StringDescriptor through class loader: sun.misc.Launcher$AppClassLoader@4e836869, exception: java.lang.ClassNotFoundException: java.lang.StringDescriptor
+DEBUG [pool-1-thread-2] (ResolveHelpers.java:143) - Ignored problem at loading class: java.lang.descriptors.StringDescriptor through class loader: sun.misc.Launcher$AppClassLoader@4e836869, exception: java.lang.ClassNotFoundException: java.lang.descriptors.StringDescriptor
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:578) - Called addAllDescriptors with null or empty descriptor map
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: java.lang.String found: null
+DEBUG [pool-1-thread-2] (AbstractResolverClassCommand.java:50) - Now in method: org.exolab.castor.xml.util.resolvers.ByIntrospection resolving: java.lang.String
+DEBUG [pool-1-thread-2] (ByIntrospection.java:93) - Found descriptor: org.exolab.castor.xml.descriptors.StringClassDescriptor@6e95223c
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:459) - Adding descriptor class for: java.lang.String descriptor: org.exolab.castor.xml.descriptors.StringClassDescriptor@6e95223c
+DEBUG [pool-1-thread-2] (XMLClassDescriptorResolverImpl.java:498) - Get descriptor for: java.lang.String found: org.exolab.castor.xml.descriptors.StringClassDescriptor@6e95223c
+ERROR [pool-1-thread-2] (FilesListener.java:85) - Exception when do parsing file inp_incorrect.xml
+org.springframework.oxm.UnmarshallingFailureException: Castor unmarshalling exception; nested exception is org.exolab.castor.xml.MarshalException: java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss[.fffffffff]{File: [not available]; line: 2; column: 206}
+	at org.springframework.oxm.castor.CastorMarshaller.convertCastorException(CastorMarshaller.java:700)
+	at org.springframework.oxm.castor.CastorMarshaller.unmarshalInputStream(CastorMarshaller.java:592)
+	at org.springframework.oxm.support.AbstractMarshaller.unmarshalStreamSource(AbstractMarshaller.java:368)
+	at org.springframework.oxm.support.AbstractMarshaller.unmarshal(AbstractMarshaller.java:134)
+	at com.filesprocessing.utils.XMLConverter.convertFromXMLToObject(XMLConverter.java:60)
+	at com.filesprocessing.listener.FilesListener$FileRunnable.run(FilesListener.java:77)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.exolab.castor.xml.MarshalException: java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss[.fffffffff]{File: [not available]; line: 2; column: 206}
+	at org.exolab.castor.xml.Unmarshaller.convertSAXExceptionToMarshalException(Unmarshaller.java:761)
+	at org.exolab.castor.xml.Unmarshaller.unmarshal(Unmarshaller.java:727)
+	at org.springframework.oxm.castor.CastorMarshaller.unmarshalInputStream(CastorMarshaller.java:589)
+	... 10 more
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss[.fffffffff]
+	at org.exolab.castor.mapping.handlers.EnumFieldHandler.convertUponSet(EnumFieldHandler.java:151)
+	at org.exolab.castor.mapping.GeneralizedFieldHandler.setValue(GeneralizedFieldHandler.java:274)
+	at org.exolab.castor.mapping.GeneralizedFieldHandler.setValue(GeneralizedFieldHandler.java:274)
+	at org.exolab.castor.xml.UnmarshalHandler.endElement(UnmarshalHandler.java:1068)
+	at org.exolab.castor.xml.UnmarshalHandler.endElement(UnmarshalHandler.java:1159)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.exolab.castor.xml.Unmarshaller.unmarshal(Unmarshaller.java:715)
+	... 11 more
+ INFO [pool-1-thread-2] (FilesListener.java:87) - Unparsed file inp_incorrect.xml move to the src\test\resources\fail\inp_incorrect.xml
+DEBUG [Test worker] (DirtiesContextTestExecutionListener.java:107) - After test method: context [[TestContext@699eb5f6 testClass = FilesListenerTest, testInstance = com.filesprocessing.test.FilesListenerTest@11bbf66b, testMethod = handlerIncorrectFileTest@FilesListenerTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [Test worker] (DirtiesContextTestExecutionListener.java:138) - After test class: context [[TestContext@699eb5f6 testClass = FilesListenerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6d2ba54f testClass = FilesListenerTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], dirtiesContext [false].
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

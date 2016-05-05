@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task" 
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/task 
+        http://www.springframework.org/schema/task/spring-task-3.2.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+    <!--
+     Включаем опцию использования конфигурационных аннотаций (@Annotation-based configuration)
+    -->
+    <context:annotation-config/>
+    <!--
+     Определяем папки, в которых будем автоматически искать бины-компоненты (@Component, @Service)  
+    --> 
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>  
+    <context:component-scan base-package="com.filesprocessing.dao.impl"/>
+    <context:component-scan base-package="com.filesprocessing.service"/>
+    
+    <bean id="configProperties"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:configuration.properties" />
+    </bean>
+    
+    <bean id="configuration" class="com.filesprocessing.configuration.Configuration">
+        <constructor-arg value="${conf.dirInp}"/>
+        <constructor-arg value="${conf.dirOut}" />
+        <constructor-arg value="${conf.dirFail}"/>
+        <constructor-arg value="${conf.monitorPeriod}"/>
+        <constructor-arg value="${conf.regExMask}"/>
+        <constructor-arg value="${conf.numPoolThread}"/>
+    </bean>
+    
+    <bean id="filesListener" class="com.filesprocessing.listener.FilesListener">
+        <constructor-arg ref="configuration"/>
+    </bean>
+    
+    <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller">
+        <property name="mappingLocation" value="classpath:mapping.xml" />
+    </bean>
+    
+    <bean id="xmlConverter" class="com.filesprocessing.utils.XMLConverter">
+        <property name="unmarshaller" ref="castorMarshaller" />
+    </bean>
+    
+    <task:scheduled-tasks>
+        <task:scheduled 
+            ref="filesListener" 
+            method="extractFiles" 
+            cron="${conf.monitorPeriod}"/> 
+    </task:scheduled-tasks>
+    
+    <import resource="databaseConfig.xml"/>
+</beans>

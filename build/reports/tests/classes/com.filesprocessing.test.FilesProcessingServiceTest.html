@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.filesprocessing.test.FilesProcessingServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.filesprocessing.test.FilesProcessingServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.filesprocessing.test.html">com.filesprocessing.test</a> &gt; FilesProcessingServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.492s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">betweenQueryTest</td>
+<td>0.476s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">insertDeleteTest</td>
+<td>0.575s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateTest</td>
+<td>0.441s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>DEBUG [Test worker] (SpringJUnit4ClassRunner.java:106) - SpringJUnit4ClassRunner constructor called with [class com.filesprocessing.test.FilesProcessingServiceTest].
+DEBUG [Test worker] (AbstractDelegatingSmartContextLoader.java:89) - Delegating to GenericXmlContextLoader to process context configuration [ContextConfigurationAttributes@3b3cc078 declaringClass = 'com.filesprocessing.test.FilesProcessingServiceTest', locations = '{classpath:testSpring.xml}', classes = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+DEBUG [Test worker] (ContextLoaderUtils.java:471) - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (TestContextManager.java:183) - @TestExecutionListeners is not present for class [class com.filesprocessing.test.FilesProcessingServiceTest]: using defaults.
+ INFO [Test worker] (TestContextManager.java:224) - Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (DependencyInjectionTestExecutionListener.java:73) - Performing dependency injection for test context [[TestContext@118024aa testClass = FilesProcessingServiceTest, testInstance = com.filesprocessing.test.FilesProcessingServiceTest@73e71ddf, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [Test worker] (CacheAwareContextLoaderDelegate.java:104) - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesProcessingServiceTest': AutowiredFieldElement for com.filesprocessing.service.FilesProcessingService com.filesprocessing.test.FilesProcessingServiceTest.fp
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'filesProcessingService'
+DEBUG [Test worker] (AutowiredAnnotationBeanPostProcessor.java:436) - Autowiring by type from bean name 'com.filesprocessing.test.FilesProcessingServiceTest' to bean named 'filesProcessingService'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.add]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833255
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@5261c3ed] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@5261c3ed]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@312cd9dc]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractSaveEventListener.java:134) - generated identifier: 124, using strategy: org.hibernate.id.IncrementGenerator
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content, id=124, creationDate=Fri May 06 00:22:05 EEST 2016, procDate=Fri May 06 00:22:05 EEST 2016}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - insert into public.Filesprocessing (content, creationdate, procdate, id) values (?, ?, ?, ?)
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@5261c3ed]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content, id=124, creationDate=Fri May 06 00:22:05 EEST 2016, procDate=Fri May 06 00:22:05 EEST 2016}
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@5261c3ed] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.getFilesProcessingByDate]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833256
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@495704bc] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@495704bc]
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (DataSourceUtils.java:153) - Setting JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@6ff7f841] read-only
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@6ff7f841]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (QueryTranslatorImpl.java:272) - parse() - HQL:  from com.filesprocessing.domain.Filesprocessing where creationdate = :creationdate
+DEBUG [Test worker] (QueryTranslatorImpl.java:291) - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'from'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[IDENT] Node: 'com'
+    |           |  |  \-[IDENT] Node: 'filesprocessing'
+    |           |  \-[IDENT] Node: 'domain'
+    |           \-[IDENT] Node: 'Filesprocessing'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'creationdate'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'creationdate'
+
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (HqlSqlBaseWalker.java:111) - select &lt;&lt; begin [level=1, statement=select]
+DEBUG [Test worker] (FromElement.java:157) - FromClause{level=1} :  com.filesprocessing.domain.Filesprocessing (no alias) -&gt; filesproce0_
+DEBUG [Test worker] (HqlSqlBaseWalker.java:117) - select : finishing up [level=1, statement=select]
+DEBUG [Test worker] (HqlSqlWalker.java:625) - processQuery() :  ( SELECT ( FromClause{level=1} public.Filesprocessing filesproce0_ ) ( where ( = creationdate ? ) ) )
+DEBUG [Test worker] (HqlSqlWalker.java:868) - Derived SELECT clause created.
+DEBUG [Test worker] (JoinProcessor.java:179) - Using FROM fragment [public.Filesprocessing filesproce0_]
+DEBUG [Test worker] (HqlSqlBaseWalker.java:123) - select &gt;&gt; end [level=1, statement=select]
+DEBUG [Test worker] (QueryTranslatorImpl.java:258) - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.Filesprocessing)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'filesproce0_.id as id0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.Filesprocessing,tableAlias=filesproce0_,origin=null,columns={,className=com.filesprocessing.domain.Filesprocessing}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[filesproce0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'public.Filesprocessing filesproce0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.Filesprocessing,tableAlias=filesproce0_,origin=null,columns={,className=com.filesprocessing.domain.Filesprocessing}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[IDENT] IdentNode: 'creationdate' {originalText=creationdate}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=creationdate, expectedType=null}
+
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (QueryTranslatorImpl.java:241) - HQL:  from com.filesprocessing.domain.Filesprocessing where creationdate = :creationdate
+DEBUG [Test worker] (QueryTranslatorImpl.java:242) - SQL: select filesproce0_.id as id0_, filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_ from public.Filesprocessing filesproce0_ where creationdate=?
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - select filesproce0_.id as id0_, filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_ from public.Filesprocessing filesproce0_ where creationdate=?
+DEBUG [Test worker] (AbstractBatcher.java:426) - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG [Test worker] (Loader.java:1322) - result row: EntityKey[com.filesprocessing.domain.Filesprocessing#124]
+DEBUG [Test worker] (AbstractBatcher.java:433) - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (TwoPhaseLoad.java:130) - resolving associations for [com.filesprocessing.domain.Filesprocessing#124]
+DEBUG [Test worker] (TwoPhaseLoad.java:255) - done materializing entity [com.filesprocessing.domain.Filesprocessing#124]
+DEBUG [Test worker] (StatefulPersistenceContext.java:893) - initializing non-lazy collections
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@495704bc]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (DataSourceUtils.java:222) - Resetting read-only flag of JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@6ff7f841]
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@495704bc] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.delete]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833259
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@3a60cb71] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@3a60cb71]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@28cc85a8]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    , id=124, creationDate=2016-05-06 00:22:05.553, procDate=2016-05-06 00:22:05.553}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - delete from public.Filesprocessing where id=?
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@3a60cb71]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@3a60cb71] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.getFilesProcessingById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833260
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@625f8cc7] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@625f8cc7]
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (DataSourceUtils.java:153) - Setting JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@6f138f45] read-only
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@6f138f45]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (QueryTranslatorImpl.java:272) - parse() - HQL:  from com.filesprocessing.domain.Filesprocessing where id = :id
+DEBUG [Test worker] (QueryTranslatorImpl.java:291) - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'from'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[IDENT] Node: 'com'
+    |           |  |  \-[IDENT] Node: 'filesprocessing'
+    |           |  \-[IDENT] Node: 'domain'
+    |           \-[IDENT] Node: 'Filesprocessing'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'id'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'id'
+
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (HqlSqlBaseWalker.java:111) - select &lt;&lt; begin [level=1, statement=select]
+DEBUG [Test worker] (FromElement.java:157) - FromClause{level=1} :  com.filesprocessing.domain.Filesprocessing (no alias) -&gt; filesproce0_
+DEBUG [Test worker] (FromReferenceNode.java:74) - Resolved :  {synthetic-alias} -&gt; {synthetic-alias}
+DEBUG [Test worker] (DotNode.java:613) - getDataType() : id -&gt; org.hibernate.type.LongType@3103dc71
+DEBUG [Test worker] (FromReferenceNode.java:74) - Resolved :  {synthetic-alias}.id -&gt; filesproce0_.id
+DEBUG [Test worker] (HqlSqlBaseWalker.java:117) - select : finishing up [level=1, statement=select]
+DEBUG [Test worker] (HqlSqlWalker.java:625) - processQuery() :  ( SELECT ( FromClause{level=1} public.Filesprocessing filesproce0_ ) ( where ( = ( filesproce0_.id {synthetic-alias} id ) ? ) ) )
+DEBUG [Test worker] (HqlSqlWalker.java:868) - Derived SELECT clause created.
+DEBUG [Test worker] (JoinProcessor.java:179) - Using FROM fragment [public.Filesprocessing filesproce0_]
+DEBUG [Test worker] (HqlSqlBaseWalker.java:123) - select &gt;&gt; end [level=1, statement=select]
+DEBUG [Test worker] (QueryTranslatorImpl.java:258) - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.Filesprocessing)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'filesproce0_.id as id0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.Filesprocessing,tableAlias=filesproce0_,origin=null,columns={,className=com.filesprocessing.domain.Filesprocessing}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[filesproce0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'public.Filesprocessing filesproce0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.Filesprocessing,tableAlias=filesproce0_,origin=null,columns={,className=com.filesprocessing.domain.Filesprocessing}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'filesproce0_.id' {propertyName=id,dereferenceType=ALL,propertyPath=id,path={synthetic-alias}.id,tableAlias=filesproce0_,className=com.filesprocessing.domain.Filesprocessing,classAlias=null}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'id' {originalText=id}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=id, expectedType=org.hibernate.type.LongType@3103dc71}
+
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (QueryTranslatorImpl.java:241) - HQL:  from com.filesprocessing.domain.Filesprocessing where id = :id
+DEBUG [Test worker] (QueryTranslatorImpl.java:242) - SQL: select filesproce0_.id as id0_, filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=?
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - select filesproce0_.id as id0_, filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_ from public.Filesprocessing filesproce0_ where filesproce0_.id=?
+DEBUG [Test worker] (AbstractBatcher.java:426) - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG [Test worker] (AbstractBatcher.java:433) - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (StatefulPersistenceContext.java:893) - initializing non-lazy collections
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@625f8cc7]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (DataSourceUtils.java:222) - Resetting read-only flag of JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@6f138f45]
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@625f8cc7] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (DirtiesContextTestExecutionListener.java:107) - After test method: context [[TestContext@118024aa testClass = FilesProcessingServiceTest, testInstance = com.filesprocessing.test.FilesProcessingServiceTest@73e71ddf, testMethod = insertDeleteTest@FilesProcessingServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (DependencyInjectionTestExecutionListener.java:73) - Performing dependency injection for test context [[TestContext@118024aa testClass = FilesProcessingServiceTest, testInstance = com.filesprocessing.test.FilesProcessingServiceTest@25f556c5, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [Test worker] (CacheAwareContextLoaderDelegate.java:104) - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesProcessingServiceTest': AutowiredFieldElement for com.filesprocessing.service.FilesProcessingService com.filesprocessing.test.FilesProcessingServiceTest.fp
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'filesProcessingService'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.add]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833261
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@e13b2fb] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@e13b2fb]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@2f4b83f5]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractSaveEventListener.java:134) - generated identifier: 125, using strategy: org.hibernate.id.IncrementGenerator
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content3, id=125, creationDate=Fri May 06 00:22:06 EEST 2016, procDate=Fri May 06 00:22:06 EEST 2016}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - insert into public.Filesprocessing (content, creationdate, procdate, id) values (?, ?, ?, ?)
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@e13b2fb]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content3, id=125, creationDate=Fri May 06 00:22:06 EEST 2016, procDate=Fri May 06 00:22:06 EEST 2016}
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@e13b2fb] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.add]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833262
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@143d13d6] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@143d13d6]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@35e150fb]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractSaveEventListener.java:134) - generated identifier: 126, using strategy: org.hibernate.id.IncrementGenerator
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content4, id=126, creationDate=Fri May 06 00:22:06 EEST 2016, procDate=Fri May 06 00:22:06 EEST 2016}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - insert into public.Filesprocessing (content, creationdate, procdate, id) values (?, ?, ?, ?)
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@143d13d6]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content4, id=126, creationDate=Fri May 06 00:22:06 EEST 2016, procDate=Fri May 06 00:22:06 EEST 2016}
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@143d13d6] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.getFilesProcessingBetweenDate]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833262
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@1ef05b9b] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@1ef05b9b]
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (DataSourceUtils.java:153) - Setting JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@360e2cfb] read-only
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@360e2cfb]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (QueryTranslatorImpl.java:272) - parse() - HQL:  from com.filesprocessing.domain.Filesprocessing where creationdate between :dateFrom and :dateTo
+DEBUG [Test worker] (QueryTranslatorImpl.java:291) - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'from'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[IDENT] Node: 'com'
+    |           |  |  \-[IDENT] Node: 'filesprocessing'
+    |           |  \-[IDENT] Node: 'domain'
+    |           \-[IDENT] Node: 'Filesprocessing'
+    \-[WHERE] Node: 'where'
+       \-[BETWEEN] Node: 'between'
+          +-[IDENT] Node: 'creationdate'
+          +-[COLON] Node: ':'
+          |  \-[IDENT] Node: 'dateFrom'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'dateTo'
+
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (HqlSqlBaseWalker.java:111) - select &lt;&lt; begin [level=1, statement=select]
+DEBUG [Test worker] (FromElement.java:157) - FromClause{level=1} :  com.filesprocessing.domain.Filesprocessing (no alias) -&gt; filesproce0_
+DEBUG [Test worker] (HqlSqlBaseWalker.java:117) - select : finishing up [level=1, statement=select]
+DEBUG [Test worker] (HqlSqlWalker.java:625) - processQuery() :  ( SELECT ( FromClause{level=1} public.Filesprocessing filesproce0_ ) ( where ( between creationdate ? ? ) ) )
+DEBUG [Test worker] (HqlSqlWalker.java:868) - Derived SELECT clause created.
+DEBUG [Test worker] (JoinProcessor.java:179) - Using FROM fragment [public.Filesprocessing filesproce0_]
+DEBUG [Test worker] (HqlSqlBaseWalker.java:123) - select &gt;&gt; end [level=1, statement=select]
+DEBUG [Test worker] (QueryTranslatorImpl.java:258) - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.Filesprocessing)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'filesproce0_.id as id0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.Filesprocessing,tableAlias=filesproce0_,origin=null,columns={,className=com.filesprocessing.domain.Filesprocessing}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[filesproce0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'public.Filesprocessing filesproce0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.Filesprocessing,tableAlias=filesproce0_,origin=null,columns={,className=com.filesprocessing.domain.Filesprocessing}}
+    \-[WHERE] SqlNode: 'where'
+       \-[BETWEEN] BetweenOperatorNode: 'between'
+          +-[IDENT] IdentNode: 'creationdate' {originalText=creationdate}
+          +-[NAMED_PARAM] ParameterNode: '?' {name=dateFrom, expectedType=null}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=dateTo, expectedType=null}
+
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (QueryTranslatorImpl.java:241) - HQL:  from com.filesprocessing.domain.Filesprocessing where creationdate between :dateFrom and :dateTo
+DEBUG [Test worker] (QueryTranslatorImpl.java:242) - SQL: select filesproce0_.id as id0_, filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_ from public.Filesprocessing filesproce0_ where creationdate between ? and ?
+DEBUG [Test worker] (ErrorCounter.java:91) - throwQueryException() : no errors
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - select filesproce0_.id as id0_, filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_ from public.Filesprocessing filesproce0_ where creationdate between ? and ?
+DEBUG [Test worker] (AbstractBatcher.java:426) - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG [Test worker] (Loader.java:1322) - result row: EntityKey[com.filesprocessing.domain.Filesprocessing#125]
+DEBUG [Test worker] (Loader.java:1322) - result row: EntityKey[com.filesprocessing.domain.Filesprocessing#126]
+DEBUG [Test worker] (AbstractBatcher.java:433) - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (TwoPhaseLoad.java:130) - resolving associations for [com.filesprocessing.domain.Filesprocessing#125]
+DEBUG [Test worker] (TwoPhaseLoad.java:255) - done materializing entity [com.filesprocessing.domain.Filesprocessing#125]
+DEBUG [Test worker] (TwoPhaseLoad.java:130) - resolving associations for [com.filesprocessing.domain.Filesprocessing#126]
+DEBUG [Test worker] (TwoPhaseLoad.java:255) - done materializing entity [com.filesprocessing.domain.Filesprocessing#126]
+DEBUG [Test worker] (StatefulPersistenceContext.java:893) - initializing non-lazy collections
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@1ef05b9b]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (DataSourceUtils.java:222) - Resetting read-only flag of JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@360e2cfb]
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@1ef05b9b] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.delete]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833264
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@34109a9d] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@34109a9d]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@2e16d41f]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content3, id=125, creationDate=Fri May 06 00:22:06 EEST 2016, procDate=Fri May 06 00:22:06 EEST 2016}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - delete from public.Filesprocessing where id=?
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@34109a9d]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@34109a9d] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.delete]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833265
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@4cdae43e] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@4cdae43e]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@59499477]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content4, id=126, creationDate=Fri May 06 00:22:06 EEST 2016, procDate=Fri May 06 00:22:06 EEST 2016}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - delete from public.Filesprocessing where id=?
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@4cdae43e]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@4cdae43e] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (DirtiesContextTestExecutionListener.java:107) - After test method: context [[TestContext@118024aa testClass = FilesProcessingServiceTest, testInstance = com.filesprocessing.test.FilesProcessingServiceTest@25f556c5, testMethod = betweenQueryTest@FilesProcessingServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [Test worker] (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.filesprocessing.test.FilesProcessingServiceTest]
+DEBUG [Test worker] (DependencyInjectionTestExecutionListener.java:73) - Performing dependency injection for test context [[TestContext@118024aa testClass = FilesProcessingServiceTest, testInstance = com.filesprocessing.test.FilesProcessingServiceTest@23a71bfd, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [Test worker] (CacheAwareContextLoaderDelegate.java:104) - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [Test worker] (InjectionMetadata.java:85) - Processing injected method of bean 'com.filesprocessing.test.FilesProcessingServiceTest': AutowiredFieldElement for com.filesprocessing.service.FilesProcessingService com.filesprocessing.test.FilesProcessingServiceTest.fp
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'filesProcessingService'
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.add]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833265
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@301e9154] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@301e9154]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@26d73a7a]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractSaveEventListener.java:134) - generated identifier: 127, using strategy: org.hibernate.id.IncrementGenerator
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content2, id=127, creationDate=Fri May 06 00:22:06 EEST 2016, procDate=Fri May 06 00:22:06 EEST 2016}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - insert into public.Filesprocessing (content, creationdate, procdate, id) values (?, ?, ?, ?)
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@301e9154]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=Test content2, id=127, creationDate=Fri May 06 00:22:06 EEST 2016, procDate=Fri May 06 00:22:06 EEST 2016}
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@301e9154] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.getFilesProcessingByDate]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833266
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@41fc68d] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@41fc68d]
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (DataSourceUtils.java:153) - Setting JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@42245518] read-only
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@42245518]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - select filesproce0_.id as id0_, filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_ from public.Filesprocessing filesproce0_ where creationdate=?
+DEBUG [Test worker] (AbstractBatcher.java:426) - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG [Test worker] (Loader.java:1322) - result row: EntityKey[com.filesprocessing.domain.Filesprocessing#127]
+DEBUG [Test worker] (AbstractBatcher.java:433) - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (TwoPhaseLoad.java:130) - resolving associations for [com.filesprocessing.domain.Filesprocessing#127]
+DEBUG [Test worker] (TwoPhaseLoad.java:255) - done materializing entity [com.filesprocessing.domain.Filesprocessing#127]
+DEBUG [Test worker] (StatefulPersistenceContext.java:893) - initializing non-lazy collections
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@41fc68d]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (DataSourceUtils.java:222) - Resetting read-only flag of JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@42245518]
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@41fc68d] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833267
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@49e4681e] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@49e4681e]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@326faf78]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=update content, id=127, creationDate=2016-05-06 00:22:06.595, procDate=2016-05-06 00:22:06.595}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - update public.Filesprocessing set content=?, creationdate=?, procdate=? where id=?
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@49e4681e]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=update content, id=127, creationDate=2016-05-06 00:22:06.595, procDate=2016-05-06 00:22:06.595}
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@49e4681e] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.getFilesProcessingByDate]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833268
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@597399c] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@597399c]
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (DataSourceUtils.java:153) - Setting JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@175f3212] read-only
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@175f3212]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - select filesproce0_.id as id0_, filesproce0_.content as content0_, filesproce0_.creationdate as creation3_0_, filesproce0_.procdate as procdate0_ from public.Filesprocessing filesproce0_ where creationdate=?
+DEBUG [Test worker] (AbstractBatcher.java:426) - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG [Test worker] (Loader.java:1322) - result row: EntityKey[com.filesprocessing.domain.Filesprocessing#127]
+DEBUG [Test worker] (AbstractBatcher.java:433) - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (TwoPhaseLoad.java:130) - resolving associations for [com.filesprocessing.domain.Filesprocessing#127]
+DEBUG [Test worker] (TwoPhaseLoad.java:255) - done materializing entity [com.filesprocessing.domain.Filesprocessing#127]
+DEBUG [Test worker] (StatefulPersistenceContext.java:893) - initializing non-lazy collections
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@597399c]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (DataSourceUtils.java:222) - Resetting read-only flag of JDBC Connection [org.postgresql.jdbc4.Jdbc4Connection@175f3212]
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@597399c] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [com.filesprocessing.service.FilesProcessingService.delete]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [Test worker] (SessionImpl.java:265) - opened session at timestamp: 14624833269
+DEBUG [Test worker] (HibernateTransactionManager.java:494) - Opened new Session [org.hibernate.impl.SessionImpl@7c8c856c] for Hibernate transaction
+DEBUG [Test worker] (HibernateTransactionManager.java:505) - Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@7c8c856c]
+DEBUG [Test worker] (JDBCTransaction.java:78) - begin
+DEBUG [Test worker] (ConnectionManager.java:444) - opening JDBC connection
+DEBUG [Test worker] (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/processing]
+DEBUG [Test worker] (JDBCTransaction.java:83) - current autocommit status: true
+DEBUG [Test worker] (JDBCTransaction.java:86) - disabling autocommit
+DEBUG [Test worker] (HibernateTransactionManager.java:570) - Exposing Hibernate transaction as JDBC transaction [org.postgresql.jdbc4.Jdbc4Connection@6d8bb555]
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (HibernateTemplate.java:398) - Found thread-bound Session for HibernateTemplate
+DEBUG [Test worker] (AbstractFlushingEventListener.java:134) - processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:177) - dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:108) - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (Printer.java:106) - listing entities:
+DEBUG [Test worker] (Printer.java:113) - com.filesprocessing.domain.Filesprocessing{content=update content, id=127, creationDate=2016-05-06 00:22:06.595, procDate=2016-05-06 00:22:06.595}
+DEBUG [Test worker] (AbstractBatcher.java:410) - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG [Test worker] (SQLStatementLogger.java:111) - delete from public.Filesprocessing where id=?
+DEBUG [Test worker] (BatchingBatcher.java:66) - Executing batch size: 1
+DEBUG [Test worker] (AbstractBatcher.java:418) - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG [Test worker] (HibernateTemplate.java:423) - Not closing pre-bound Hibernate Session after HibernateTemplate
+DEBUG [Test worker] (AbstractPlatformTransactionManager.java:753) - Initiating transaction commit
+DEBUG [Test worker] (HibernateTransactionManager.java:653) - Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@7c8c856c]
+DEBUG [Test worker] (JDBCTransaction.java:130) - commit
+DEBUG [Test worker] (JDBCTransaction.java:223) - re-enabling autocommit
+DEBUG [Test worker] (JDBCTransaction.java:143) - committed JDBC Connection
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (HibernateTransactionManager.java:735) - Closing Hibernate Session [org.hibernate.impl.SessionImpl@7c8c856c] after transaction
+DEBUG [Test worker] (SessionFactoryUtils.java:802) - Closing Hibernate Session
+DEBUG [Test worker] (ConnectionManager.java:464) - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG [Test worker] (ConnectionManager.java:325) - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG [Test worker] (DirtiesContextTestExecutionListener.java:107) - After test method: context [[TestContext@118024aa testClass = FilesProcessingServiceTest, testInstance = com.filesprocessing.test.FilesProcessingServiceTest@23a71bfd, testMethod = updateTest@FilesProcessingServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [Test worker] (DirtiesContextTestExecutionListener.java:138) - After test class: context [[TestContext@118024aa testClass = FilesProcessingServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a5a56eb testClass = FilesProcessingServiceTest, locations = '{classpath:testSpring.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], dirtiesContext [false].
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.10</a> at 06.05.2016 0:22:07</p>
+</div>
+</div>
+</body>
+</html>
