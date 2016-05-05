@@ -2,7 +2,6 @@ language: java
 jdk:
   - oraclejdk7
 gradle check
-gradle assemble
 branches:
    only:
      - master
