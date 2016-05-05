@@ -2,8 +2,7 @@ sudo: false
 language: java
 jdk:
   - oraclejdk7
-install: /bin/true
-#script:  mvn install -Dmaven.test.skip=true
+gradle check
 branches:
    only:
      - master
