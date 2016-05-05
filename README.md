@@ -1,7 +1,8 @@
-### Настройка базы данных PostgreSQL:
+https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master
+### ГЌГ Г±ГІГ°Г®Г©ГЄГ  ГЎГ Г§Г» Г¤Г Г­Г­Г»Гµ PostgreSQL:
 
---Шаг 1
---Создать БД hello с помощью shell psql или любым удобным способом :)
+--ГГ ГЈ 1
+--Г‘Г®Г§Г¤Г ГІГј ГЃГ„ hello Г± ГЇГ®Г¬Г®Г№ГјГѕ shell psql ГЁГ«ГЁ Г«ГѕГЎГ»Г¬ ГіГ¤Г®ГЎГ­Г»Г¬ Г±ГЇГ®Г±Г®ГЎГ®Г¬ :)
 CREATE DATABASE hello
   WITH OWNER = postgres
        ENCODING = 'UTF8'
@@ -9,7 +10,7 @@ CREATE DATABASE hello
        LC_COLLATE = 'English_United States.1252'
        LC_CTYPE = 'English_United States.1252'
        CONNECTION LIMIT = -1;
---Создать таблицу contacts      
+--Г‘Г®Г§Г¤Г ГІГј ГІГ ГЎГ«ГЁГ¶Гі contacts      
 CREATE TABLE contacts
 (
   id bigint NOT NULL, -- User id
@@ -23,37 +24,37 @@ ALTER TABLE contacts
   OWNER TO postgres;
 COMMENT ON COLUMN contacts.id IS 'User id';
 COMMENT ON COLUMN contacts.name IS 'User name';
---[лог выполнения psqlCmd.log]
+--[Г«Г®ГЈ ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї psqlCmd.log]
 
---Шаг 2
---Сделать рестор из contactsBackup.backup с помощью ..PostgreSQL/bin/pg_restore 
---следующей командой  
+--ГГ ГЈ 2
+--Г‘Г¤ГҐГ«Г ГІГј Г°ГҐГ±ГІГ®Г° ГЁГ§ contactsBackup.backup Г± ГЇГ®Г¬Г®Г№ГјГѕ ..PostgreSQL/bin/pg_restore 
+--Г±Г«ГҐГ¤ГіГѕГ№ГҐГ© ГЄГ®Г¬Г Г­Г¤Г®Г©  
 pg_restore --host localhost --port 5432 --username "postgres" --dbname "hello" --password  --data-only --table contacts --verbose "G:\Java_Project\ContactsSeeker\contactsBackup.backup"
---[лог выполнения pg_restoreCmd.log]
--Обратить внимание на файл databaseConfig.xml в нем происходит настройка JDBC, а также подключения к Postgresql
+--[Г«Г®ГЈ ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї pg_restoreCmd.log]
+-ГЋГЎГ°Г ГІГЁГІГј ГўГ­ГЁГ¬Г Г­ГЁГҐ Г­Г  ГґГ Г©Г« databaseConfig.xml Гў Г­ГҐГ¬ ГЇГ°Г®ГЁГ±ГµГ®Г¤ГЁГІ Г­Г Г±ГІГ°Г®Г©ГЄГ  JDBC, Г  ГІГ ГЄГ¦ГҐ ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГї ГЄ Postgresql
 
-### Как собрать артефакт (*.war):
+### ГЉГ ГЄ Г±Г®ГЎГ°Г ГІГј Г Г°ГІГҐГґГ ГЄГІ (*.war):
 
--Используем команду mvn clean install
--Смотрим логи все ли собралось, выполнились ли тесты
+-Г€Г±ГЇГ®Г«ГјГ§ГіГҐГ¬ ГЄГ®Г¬Г Г­Г¤Гі mvn clean install
+-Г‘Г¬Г®ГІГ°ГЁГ¬ Г«Г®ГЈГЁ ГўГ±ГҐ Г«ГЁ Г±Г®ГЎГ°Г Г«Г®Г±Гј, ГўГ»ГЇГ®Г«Г­ГЁГ«ГЁГ±Гј Г«ГЁ ГІГҐГ±ГІГ»
 
-### Деплой прилождения:
--Деплоим приложение спомощью mvn tomcat:deploy (мануал http://programador.ru/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-maven-tomcat/)
-либо с  помощью любого IDE, имеющего такой функционал
--Развертывание проекта осуществлялось под Apache Tomcat 8.0.9 (возможен запуск и на более ранних версиях),
-платформа Java EE 7
+### Г„ГҐГЇГ«Г®Г© ГЇГ°ГЁГ«Г®Г¦Г¤ГҐГ­ГЁГї:
+-Г„ГҐГЇГ«Г®ГЁГ¬ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГҐ Г±ГЇГ®Г¬Г®Г№ГјГѕ mvn tomcat:deploy (Г¬Г Г­ГіГ Г« http://programador.ru/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-maven-tomcat/)
+Г«ГЁГЎГ® Г±  ГЇГ®Г¬Г®Г№ГјГѕ Г«ГѕГЎГ®ГЈГ® IDE, ГЁГ¬ГҐГѕГ№ГҐГЈГ® ГІГ ГЄГ®Г© ГґГіГ­ГЄГ¶ГЁГ®Г­Г Г«
+-ГђГ Г§ГўГҐГ°ГІГ»ГўГ Г­ГЁГҐ ГЇГ°Г®ГҐГЄГІГ  Г®Г±ГіГ№ГҐГ±ГІГўГ«ГїГ«Г®Г±Гј ГЇГ®Г¤ Apache Tomcat 8.0.9 (ГўГ®Г§Г¬Г®Г¦ГҐГ­ Г§Г ГЇГіГ±ГЄ ГЁ Г­Г  ГЎГ®Г«ГҐГҐ Г°Г Г­Г­ГЁГµ ГўГҐГ°Г±ГЁГїГµ),
+ГЇГ«Г ГІГґГ®Г°Г¬Г  Java EE 7
 
 
-### Сигнатура сервиса:
+### Г‘ГЁГЈГ­Г ГІГіГ°Г  Г±ГҐГ°ГўГЁГ±Г :
 
-/hello/contacts?nameFilter=val [ &limit=500000 по умолчанию ]
-где
-nameFilter - входное регулярное выражение, исключающее в ответе данные контакты
-limit      - лимит контактов в ответе сервиса, установлено 500000 по умолчанию
+/hello/contacts?nameFilter=val [ &limit=500000 ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ ]
+ГЈГ¤ГҐ
+nameFilter - ГўГµГ®Г¤Г­Г®ГҐ Г°ГҐГЈГіГ«ГїГ°Г­Г®ГҐ ГўГ»Г°Г Г¦ГҐГ­ГЁГҐ, ГЁГ±ГЄГ«ГѕГ·Г ГѕГ№ГҐГҐ Гў Г®ГІГўГҐГІГҐ Г¤Г Г­Г­Г»ГҐ ГЄГ®Г­ГІГ ГЄГІГ»
+limit      - Г«ГЁГ¬ГЁГІ ГЄГ®Г­ГІГ ГЄГІГ®Гў Гў Г®ГІГўГҐГІГҐ Г±ГҐГ°ГўГЁГ±Г , ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­Г® 500000 ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
 
-Примеры вызовов:
-По умолчанию
+ГЏГ°ГЁГ¬ГҐГ°Г» ГўГ»Г§Г®ГўГ®Гў:
+ГЏГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
 http://localhost:8084/ContactsSeeker/hello/contacts?nameFilter=^.*[aei].*$
 
-Топ 40 000 контактов в ответе 
+Г’Г®ГЇ 40 000 ГЄГ®Г­ГІГ ГЄГІГ®Гў Гў Г®ГІГўГҐГІГҐ 
 http://localhost:8084/ContactsSeeker/hello/contacts?nameFilter=^A.*$&limit=40000
