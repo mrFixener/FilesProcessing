@@ -1,5 +1,5 @@
 language: java
-script: gradle check
+script: gradle build -x test 
 jdk:
   - oraclejdk7
 branches:
