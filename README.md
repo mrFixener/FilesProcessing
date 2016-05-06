@@ -55,7 +55,7 @@ Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -
 ```
 Конфигурация приложения
 ================
-####Вся настройка приложения находиться в файле конфигурации: *configuration.properties*, который расположен в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
+####Все настройка приложения находиться в файле конфигурации: *configuration.properties*, который расположен в исполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
 ####Структура конфигурационного файла configuration.properties:
 ```properties
 #Директория мониторинга;
