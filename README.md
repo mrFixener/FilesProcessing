@@ -43,7 +43,8 @@ CREATE DATABASE processing
 ```
 Смотрим логи все ли собралось, выполнились ли тесты
 <br>
-<b>Сам запускаемый файл будет находиться {Path_To_Project}/FilesProcessing/build/libs/FilesProcessing.jar (собранный артефакт находиться в корне проекта)</b>
+<b>После сборки запускаемый файл будет находиться {Path_To_Project}/FilesProcessing/build/libs/FilesProcessing.jar (собранный артефакт находиться в корне проекта)</b>
+#### Выполнение тестов
 #### Запуск тестов по отдельности:
 ```shell
 gradle :cleanTest :test
@@ -55,12 +56,12 @@ Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -
 Конфигурация приложения
 ================
 ####Вся настройка приложения находиться в файле конфигурации: *configuration.properties*, 
-####который находиться в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
+####который расположен в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
 ####Структура конфигурационного файла configuration.properties:
 ```properties
 #Директория мониторинга;
 conf.dirInp=src/main/resources/inp
-#директория обработанных файлов;
+#Директория обработанных файлов;
 conf.dirOut=src/main/resources/out
 #Директория файлов, обработка которых не удалась;
 conf.dirFail=src/main/resources/fail
