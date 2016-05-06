@@ -54,7 +54,8 @@ Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -
 Конфигурация приложения
 ================
 ####Вся настройка приложения находиться в файле конфигурвции: *configuration.properties*, который находиться в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
-####Структура конфигурационного файла
+####Структура конфигурационного файла configuration.properties
+```properties
 #Input directory
 conf.dirInp=src/main/resources/inp
 #Processed output directory
@@ -68,3 +69,4 @@ conf.monitorPeriod=0/20 * * * * ?
 conf.regExMask=.*inp.*\\.(xml|XML)
 #Number of processing thread. 
 conf.numPoolThread=24
+```
