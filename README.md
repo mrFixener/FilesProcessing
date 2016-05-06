@@ -1,9 +1,9 @@
-Status:[![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
+[![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
 ### Настройка базы данных PostgreSQL:
 
 ##### Шаг 1
 #####Создать БД processing с помощью shell psql или любым удобным способом :)
-  `CREATE DATABASE processing
+```sql CREATE DATABASE processing
   WITH OWNER = postgres
        ENCODING = 'UTF8'
        TABLESPACE = pg_default
@@ -28,7 +28,7 @@ Status:[![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?bran
     IS 'Processing files data';
     COMMENT ON COLUMN public.filesprocessing.id IS 'Unique id';
     COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
-    COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';`
+    COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';```
 
 ### Как собрать артефакт (*.war):
 
