@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
 Настройка базы данных PostgreSQL
 ==================
-#### Создать БД processing с помощью shell psql или любым удобным способом :)
+#### Создать БД processing с помощью shell psql или любым удобным способом
 
 ```sql 
 CREATE DATABASE processing
@@ -31,6 +31,7 @@ CREATE DATABASE processing
     IS 'Processing files data';
     COMMENT ON COLUMN public.filesprocessing.id IS 'Unique id';
     COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
+    COMMENT ON COLUMN public.filesprocessing.creationdate IS 'Content creation date';
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
 ```
 *Настройка коннекта к базе находиться в*  **databaseConfig.xml** 
@@ -54,20 +55,28 @@ Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -
 Конфигурация приложения
 ================
 ####Вся настройка приложения находиться в файле конфигурации: *configuration.properties*, 
-который находиться в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
-####Структура конфигурационного файла configuration.properties
+####который находиться в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
+####Структура конфигурационного файла configuration.properties:
 ```properties
-#Input directory
+#Директория мониторинга;
 conf.dirInp=src/main/resources/inp
-#Processed output directory
+#директория обработанных файлов;
 conf.dirOut=src/main/resources/out
-#Failed files directory
+#Директория файлов, обработка которых не удалась;
 conf.dirFail=src/main/resources/fail
-#Period of monitoring which use Unix cron ( https://en.wikipedia.org/wiki/Cron ). For example: 0 0/1 * * * ?  run every one minutes; 0/20 * * * * ? every 20 seconds
+#Период мониторинга. Используются выражения Unix cron ( https://en.wikipedia.org/wiki/Cron ). Пример выражения: 0 0/1 * * * ?  запуск каждую минуту; 0/20 * * * * ? - каждые 20 секунд
 conf.monitorPeriod=0/20 * * * * ? 
-#0-59 * * * * ? 
-#Mask files which processing needs.For example starting with inp and ending xml | XML it's ' inp.*\\.(xml|XML) '
+#Маска для поиска файлов, которые необходимо обработать.LДля примера нужно найти файлы xml | XML, в названии которых есть слово inp '.*inp.*\\.(xml|XML) '
 conf.regExMask=.*inp.*\\.(xml|XML)
-#Number of processing thread. 
+#Количество потоков в пуле. 
 conf.numPoolThread=24
 ```
+Скрипты для запуска запуска на Win и *nix-платформах
+================
+####Находяться в корне проекта:
+*run.bat
+*run.sh
+Логирование выполнения программы
+================
+####Файл логирования создается  в корне проекта:
+*applog.log*
