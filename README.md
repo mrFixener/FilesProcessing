@@ -33,18 +33,12 @@ CREATE DATABASE processing
     COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
 ```
+
+### Как собрать артефакт (*.jar):
 ================
-## Как собрать артефакт (*.jar):
-
--Используем команду mvn clean install
--Смотрим логи все ли собралось, выполнились ли тесты
-
-## Деплой прилождения:
--Деплоим приложение спомощью mvn tomcat:deploy (мануал http://programador.ru/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-maven-tomcat/)
-либо с  помощью любого IDE, имеющего такой функционал
--Развертывание проекта осуществлялось под Apache Tomcat 8.0.9 (возможен запуск и на более ранних версиях),
-платформа Java EE 7
-
+Используем команду 
+    gradle build
+Смотрим логи все ли собралось, выполнились ли тесты
 
 ## Сигнатура сервиса:
 
