@@ -66,7 +66,7 @@ conf.dirOut=src/main/resources/out
 conf.dirFail=src/main/resources/fail
 #Период мониторинга. Используются выражения Unix cron ( https://en.wikipedia.org/wiki/Cron ). Пример выражения: 0 0/1 * * * ?  запуск каждую минуту; 0/20 * * * * ? - каждые 20 секунд
 conf.monitorPeriod=0/20 * * * * ? 
-#Регулярное выражение (regex) для поиска файлов, которые необходимо обработать.Для примера нужно найти файлы xml | XML, в названии которых есть слово inp '.*inp.*\\.(xml|XML)'
+#Регулярное выражение (regex) для поиска файлов, которые необходимо обработать.Для примера нужно найти файлы xml | XML, в названии которых есть слово inp: .*inp.*\\.(xml|XML)
 conf.regExMask=.*inp.*\\.(xml|XML)
 #Количество потоков в пуле. 
 conf.numPoolThread=24
