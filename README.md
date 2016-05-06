@@ -12,23 +12,23 @@
        CONNECTION LIMIT = -1;`
  `--Создать таблицу filesprocessing      
  CREATE TABLE public.filesprocessing
-(
+ (
   id bigint NOT NULL, -- Unique id
   content character(1024), -- Content from xml file
   creationdate timestamp without time zone,
   procdate timestamp without time zone NOT NULL, -- Processing date
   CONSTRAINT filesprocessing_pkey PRIMARY KEY (id)
-)
-WITH (
+ )
+ WITH (
   OIDS=FALSE
-);
-ALTER TABLE public.filesprocessing
+ );
+ ALTER TABLE public.filesprocessing
   OWNER TO postgres;
-COMMENT ON TABLE public.filesprocessing
+ COMMENT ON TABLE public.filesprocessing
   IS 'Processing files data';
-COMMENT ON COLUMN public.filesprocessing.id IS 'Unique id';
-COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
-COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';`
+ COMMENT ON COLUMN public.filesprocessing.id IS 'Unique id';
+ COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
+ COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';`
 
 ### Как собрать артефакт (*.war):
 
