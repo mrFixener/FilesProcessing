@@ -33,7 +33,7 @@ CREATE DATABASE processing
     COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
 ```
-*Настройка коннекта к базе находиться в * **databaseConfig.xml**
+*Настройка коннекта к базе находиться в  **databaseConfig.xml** *
 Как собрать артефакт (*.jar)
 ================
 ####Используем команду 
