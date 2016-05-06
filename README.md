@@ -41,8 +41,9 @@ CREATE DATABASE processing
     gradle build
 ```
 Смотрим логи все ли собралось, выполнились ли тесты
+<br>
 <b>Сам запускаемый файл будет находиться {Path_To_Project}/FilesProcessing/build/libs/FilesProcessing.jar (собранный артефакт находиться в корне проекта)</b>
-#### Запуск тестов отдельно:
+#### Запуск тестов по отдельности:
 ```shell
 gradle :cleanTest :test
 Arguments: [-Dtest.single=com/filesprocessing/test/FilesListenerTest, -c, settings.gradle]
@@ -50,11 +51,6 @@ Arguments: [-Dtest.single=com/filesprocessing/test/FilesListenerTest, -c, settin
 gradle :cleanTest :test
 Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -c, settings.gradle]
 ```
-
-
-Примеры вызовов:
-По умолчанию
-http://localhost:8084/ContactsSeeker/hello/contacts?nameFilter=^.*[aei].*$
-
-Топ 40 000 контактов в ответе 
-http://localhost:8084/ContactsSeeker/hello/contacts?nameFilter=^A.*$&limit=40000
+Конфигурация приложения
+================
+####Вся настройка приложения находиться в файле конфигурвции: configuration.properties, который находиться в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
