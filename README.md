@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
 ## Настройка базы данных PostgreSQL:
-================
 #### Создать БД processing с помощью shell psql или любым удобным способом :)
 
 ```sql 
@@ -41,13 +40,16 @@ CREATE DATABASE processing
     gradle build
 ```
 Смотрим логи все ли собралось, выполнились ли тесты
+Используем команду 
+#### Запуск тестов отдельно:
+```shell
+gradle :cleanTest :test
+Arguments: [-Dtest.single=com/filesprocessing/test/FilesListenerTest, -c, settings.gradle]
 
-## Сигнатура сервиса:
+gradle :cleanTest :test
+Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -c, G:\Java_Project\FilesProcessing\settings.gradle]
+```
 
-/hello/contacts?nameFilter=val [ &limit=500000 по умолчанию ]
-где
-nameFilter - входное регулярное выражение, исключающее в ответе данные контакты
-limit      - лимит контактов в ответе сервиса, установлено 500000 по умолчанию
 
 Примеры вызовов:
 По умолчанию
