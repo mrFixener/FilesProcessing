@@ -3,7 +3,7 @@
 
 ##### Шаг 1
 #####Создать БД processing с помощью shell psql или любым удобным способом :)
- `CREATE DATABASE processing
+  `CREATE DATABASE processing
   WITH OWNER = postgres
        ENCODING = 'UTF8'
        TABLESPACE = pg_default
@@ -19,16 +19,16 @@
   procdate timestamp without time zone NOT NULL, -- Processing date
   CONSTRAINT filesprocessing_pkey PRIMARY KEY (id)
  )
- WITH (
-  OIDS=FALSE
- );
- ALTER TABLE public.filesprocessing
-  OWNER TO postgres;
- COMMENT ON TABLE public.filesprocessing
-  IS 'Processing files data';
- COMMENT ON COLUMN public.filesprocessing.id IS 'Unique id';
- COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
- COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';`
+   WITH (
+    OIDS=FALSE
+   );
+   ALTER TABLE public.filesprocessing
+    OWNER TO postgres;
+    COMMENT ON TABLE public.filesprocessing
+    IS 'Processing files data';
+    COMMENT ON COLUMN public.filesprocessing.id IS 'Unique id';
+    COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
+    COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';`
 
 ### Как собрать артефакт (*.war):
 
