@@ -33,7 +33,7 @@ CREATE DATABASE processing
     COMMENT ON COLUMN public.filesprocessing.id IS 'Unique id';
     COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
-    ```
+```
 ================
 ### Как собрать артефакт (*.war):
 
