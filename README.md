@@ -3,6 +3,7 @@
 
 ##### Шаг 1
 #####Создать БД processing с помощью shell psql или любым удобным способом :)
+================
 ```sql 
 CREATE DATABASE processing
   WITH OWNER = postgres
@@ -10,8 +11,10 @@ CREATE DATABASE processing
        TABLESPACE = pg_default
        LC_COLLATE = 'English_United States.1252'
        LC_CTYPE = 'English_United States.1252'
-       CONNECTION LIMIT = -1;`
- `--Создать таблицу filesprocessing      
+       CONNECTION LIMIT = -1;
+       ```
+ --Создать таблицу filesprocessing      
+ ```sql
  CREATE TABLE public.filesprocessing
  (
   id bigint NOT NULL, -- Unique id
@@ -31,7 +34,7 @@ CREATE DATABASE processing
     COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
     ```
-
+================
 ### Как собрать артефакт (*.war):
 
 -Используем команду mvn clean install
