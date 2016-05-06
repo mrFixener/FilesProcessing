@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
-### Настройка базы данных PostgreSQL:
+## Настройка базы данных PostgreSQL:
 ================
 #### Создать БД processing с помощью shell psql или любым удобным способом :)
 
@@ -34,19 +34,19 @@ CREATE DATABASE processing
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
 ```
 ================
-### Как собрать артефакт (*.jar):
+## Как собрать артефакт (*.jar):
 
 -Используем команду mvn clean install
 -Смотрим логи все ли собралось, выполнились ли тесты
 
-### Деплой прилождения:
+## Деплой прилождения:
 -Деплоим приложение спомощью mvn tomcat:deploy (мануал http://programador.ru/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-maven-tomcat/)
 либо с  помощью любого IDE, имеющего такой функционал
 -Развертывание проекта осуществлялось под Apache Tomcat 8.0.9 (возможен запуск и на более ранних версиях),
 платформа Java EE 7
 
 
-### Сигнатура сервиса:
+## Сигнатура сервиса:
 
 /hello/contacts?nameFilter=val [ &limit=500000 по умолчанию ]
 где
