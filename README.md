@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
-## Настройка базы данных PostgreSQL:
+Настройка базы данных PostgreSQL:
+==================
 #### Создать БД processing с помощью shell psql или любым удобным способом :)
 
 ```sql 
@@ -33,21 +34,21 @@ CREATE DATABASE processing
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
 ```
 
-### Как собрать артефакт (*.jar):
+Как собрать артефакт (*.jar):
 ================
 Используем команду 
 ```shell
     gradle build
 ```
 Смотрим логи все ли собралось, выполнились ли тесты
-Используем команду 
+
 #### Запуск тестов отдельно:
 ```shell
 gradle :cleanTest :test
 Arguments: [-Dtest.single=com/filesprocessing/test/FilesListenerTest, -c, settings.gradle]
 
 gradle :cleanTest :test
-Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -c, G:\Java_Project\FilesProcessing\settings.gradle]
+Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -c, settings.gradle]
 ```
 
 
