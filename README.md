@@ -3,15 +3,15 @@
 
 ##### Шаг 1
 #####Создать БД processing с помощью shell psql или любым удобным способом :)
-`CREATE DATABASE processing
+ `CREATE DATABASE processing
   WITH OWNER = postgres
        ENCODING = 'UTF8'
        TABLESPACE = pg_default
        LC_COLLATE = 'English_United States.1252'
        LC_CTYPE = 'English_United States.1252'
        CONNECTION LIMIT = -1;`
---Создать таблицу filesprocessing      
-`CREATE TABLE public.filesprocessing
+ `--Создать таблицу filesprocessing      
+ CREATE TABLE public.filesprocessing
 (
   id bigint NOT NULL, -- Unique id
   content character(1024), -- Content from xml file
