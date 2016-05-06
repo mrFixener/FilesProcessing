@@ -1,1 +1,1 @@
-java -Xms512m -jar FilesProcessing.jar
+java -Xms128m -jar FilesProcessing.jar
