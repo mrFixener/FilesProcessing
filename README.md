@@ -12,9 +12,9 @@ CREATE DATABASE processing
        LC_COLLATE = 'English_United States.1252'
        LC_CTYPE = 'English_United States.1252'
        CONNECTION LIMIT = -1;
-       ```
+```
  --Создать таблицу filesprocessing      
- ```sql
+```sql
  CREATE TABLE public.filesprocessing
  (
   id bigint NOT NULL, -- Unique id
