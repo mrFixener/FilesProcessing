@@ -54,3 +54,17 @@ Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -
 Конфигурация приложения
 ================
 ####Вся настройка приложения находиться в файле конфигурвции: *configuration.properties*, который находиться в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
+####Структура конфигурационного файла
+#Input directory
+conf.dirInp=src/main/resources/inp
+#Processed output directory
+conf.dirOut=src/main/resources/out
+#Failed files directory
+conf.dirFail=src/main/resources/fail
+#Period of monitoring which use Unix cron ( https://en.wikipedia.org/wiki/Cron ). For example: 0 0/1 * * * ?  run every one minutes; 0/20 * * * * ? every 20 seconds
+conf.monitorPeriod=0/20 * * * * ? 
+#0-59 * * * * ? 
+#Mask files which processing needs.For example starting with inp and ending xml | XML it's ' inp.*\\.(xml|XML) '
+conf.regExMask=.*inp.*\\.(xml|XML)
+#Number of processing thread. 
+conf.numPoolThread=24
