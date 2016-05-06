@@ -33,7 +33,7 @@ CREATE DATABASE processing
     COMMENT ON COLUMN public.filesprocessing.content IS 'Content from xml file';
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
 ```
-
+*Настройка коннекта к базе находиться в * **databaseConfig.xml**
 Как собрать артефакт (*.jar)
 ================
 ####Используем команду 
@@ -53,4 +53,4 @@ Arguments: [-Dtest.single=com/filesprocessing/test/FilesProcessingServiceTest, -
 ```
 Конфигурация приложения
 ================
-####Вся настройка приложения находиться в файле конфигурвции: configuration.properties, который находиться в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
+####Вся настройка приложения находиться в файле конфигурвции: *configuration.properties*, который находиться в выполняемом файле FilesProcessing.jar и редактируется с помощью 7Zip, WinRar и т.д.
