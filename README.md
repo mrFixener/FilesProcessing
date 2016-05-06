@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
 ### Настройка базы данных PostgreSQL:
-
-##### Шаг 1
+================
 #### Создать БД processing с помощью shell psql или любым удобным способом :)
 
 ```sql 
@@ -35,7 +34,7 @@ CREATE DATABASE processing
     COMMENT ON COLUMN public.filesprocessing.procdate IS 'Processing date';
 ```
 ================
-### Как собрать артефакт (*.war):
+### Как собрать артефакт (*.jar):
 
 -Используем команду mvn clean install
 -Смотрим логи все ли собралось, выполнились ли тесты
