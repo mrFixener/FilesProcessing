@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/mrFixener/FilesProcessing.svg?branch=master)](https://travis-ci.org/mrFixener/FilesProcessing)
 ### Настройка базы данных PostgreSQL:
 
---Шаг 1
---Создать БД processing с помощью shell psql или любым удобным способом :)
+#### Шаг 1
+####Создать БД processing с помощью shell psql или любым удобным способом :)
 `CREATE DATABASE processing
   WITH OWNER = postgres
        ENCODING = 'UTF8'
