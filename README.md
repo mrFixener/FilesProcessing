@@ -2,8 +2,8 @@
 ### Настройка базы данных PostgreSQL:
 
 ##### Шаг 1
-#####Создать БД processing с помощью shell psql или любым удобным способом :)
-================
+#### Создать БД processing с помощью shell psql или любым удобным способом :)
+
 ```sql 
 CREATE DATABASE processing
   WITH OWNER = postgres
@@ -13,7 +13,7 @@ CREATE DATABASE processing
        LC_CTYPE = 'English_United States.1252'
        CONNECTION LIMIT = -1;
 ```
- --Создать таблицу filesprocessing      
+#### Создать таблицу filesprocessing      
 ```sql
  CREATE TABLE public.filesprocessing
  (
