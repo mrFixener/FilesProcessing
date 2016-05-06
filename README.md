@@ -43,7 +43,7 @@ CREATE DATABASE processing
 ```
 Смотрим логи все ли собралось, выполнились ли тесты
 <br>
-<b>После сборки запускаемый файл будет находиться {Path_To_Project}/FilesProcessing/build/libs/FilesProcessing.jar (собранный артефакт находиться в корне проекта)</b>
+<b>После сборки запускаемый файл будет находиться {Path_To_Project}/FilesProcessing/build/libs/FilesProcessing.jar (копия собранного артефакта находиться в корне проекта)</b>
 #### Выполнение тестов
 #### Запуск тестов по отдельности:
 ```shell
